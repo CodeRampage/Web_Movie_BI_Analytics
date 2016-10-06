@@ -73,7 +73,7 @@
             this.btnCrawl.TabIndex = 0;
             this.btnCrawl.Text = "Crawl Links";
             this.btnCrawl.UseVisualStyleBackColor = true;
-            this.btnCrawl.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrawl.Click += new System.EventHandler(this.btnCrawl_Click);
             // 
             // listBox1
             // 
@@ -85,6 +85,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.listBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.listBox1);
@@ -93,7 +94,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(687, 337);
             this.panel1.TabIndex = 2;
-            this.panel1.Visible = false;
             // 
             // listBox2
             // 
@@ -115,12 +115,11 @@
             // LoginPanel
             // 
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LoginPanel.Controls.Add(this.button1);
             this.LoginPanel.Controls.Add(this.panel2);
             this.LoginPanel.Controls.Add(this.LoginContainer);
-            this.LoginPanel.Location = new System.Drawing.Point(-1, -2);
+            this.LoginPanel.Location = new System.Drawing.Point(715, 54);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(986, 664);
+            this.LoginPanel.Size = new System.Drawing.Size(851, 567);
             this.LoginPanel.TabIndex = 3;
             // 
             // panel2
@@ -182,10 +181,10 @@
             this.btnSignUp.TabIndex = 10;
             this.btnSignUp.Text = "Sign up";
             this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // pictureBox1
             // 
-//            this.pictureBox1.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Natural_User_Interface_2_104;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(174, 419);
             this.pictureBox1.Name = "pictureBox1";
@@ -257,7 +256,6 @@
             // 
             // btnAddNewUser
             // 
-//            this.btnAddNewUser.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Add_User_Male_104;
             this.btnAddNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddNewUser.Location = new System.Drawing.Point(252, 442);
             this.btnAddNewUser.Name = "btnAddNewUser";
@@ -292,7 +290,6 @@
             // 
             // PicBoxHandSign
             // 
-//            this.PicBoxHandSign.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Natural_User_Interface_2_104;
             this.PicBoxHandSign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PicBoxHandSign.Location = new System.Drawing.Point(145, 323);
             this.PicBoxHandSign.Name = "PicBoxHandSign";
@@ -325,7 +322,6 @@
             // 
             // PicBoxUserIcon
             // 
-//            this.PicBoxUserIcon.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.User;
             this.PicBoxUserIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PicBoxUserIcon.Location = new System.Drawing.Point(50, 43);
             this.PicBoxUserIcon.Name = "PicBoxUserIcon";
@@ -364,12 +360,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(48, 537);
+            this.button1.Location = new System.Drawing.Point(369, 301);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CrawlerForm
             // 

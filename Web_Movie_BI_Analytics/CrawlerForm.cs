@@ -19,56 +19,29 @@ namespace Web_Movie_BI_Analytics
 {
     public partial class CrawlerForm : Form
     {
+        //My Classes
+        LoginController sessionUser;
+        DataProcessor.Mongo mongoDataProcessor;
+        DataProcessor.Oracle oracleDataProcessor;
+
+        //Classes from other libraries
         HtmlWeb web = new HtmlWeb();
-
-        protected static IMongoClient client = new MongoClient("mongodb://intelTechs:umdeniwedb@196.253.61.51:27017/itrw321DB");
-        protected static IMongoDatabase db = client.GetDatabase("itrw321D");
-
-        protected static OracleConnection conn;
 
         public CrawlerForm()
         {
             InitializeComponent();
-            openConnection();            
+
+            sessionUser = new LoginController();
+            mongoDataProcessor = new DataProcessor.Mongo();
+            oracleDataProcessor = new DataProcessor.Oracle();
+
+            string last = "";
+
+            label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
+            //oracleDataProcessor.insertSysUser("Matimu","Matimu","Ngoveni","passit");            
         }
 
-        public class MovieData
-        {
-            public string Link { get; set; }
-            public string Name { get; set; }
-            public string Year { get; set; }
-            public string Rating { get; set; }
-            public string Overview { get; set; }
-            public string Language { get; set; }
-            public string Runtime { get; set; }
-            public string Budget { get; set; }
-            public string Revenue { get; set; }
-            public string HomePage { get; set; }
-            public string Release { get; set; }
-
-            public IEnumerable<Person> Cast { get; set; }
-        }
-
-        public class Person
-        {
-            public string Name { get; set; }
-            public string Department { get; set; }
-            public string Role { get; set; }
-            public string Character { get; set; }
-        }
-
-        protected void openConnection()
-        {
-            //conn = new OracleConnection("Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=196.253.61.51)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCL))); User Id = IntelTechs; Password = umdeniwedb");
-            //conn.Open();
-        }
-
-        protected void closeConnection()
-        {
-            conn.Close();
-        }
-
-        protected async Task<List<MovieData>> crawl(int finalPage)
+        protected async Task<List<ObjectClasses.MovieData>> crawl(int finalPage)
         {
             string url = "https://www.themoviedb.org/movie?";
 
@@ -82,13 +55,13 @@ namespace Web_Movie_BI_Analytics
             if (anchorNodes == null)
             {
                 label1.Text = "No data from webserver";
-                return new List<MovieData>();
+                return new List<ObjectClasses.MovieData>();
             }
 
             var link = anchorNodes.Select(anchor => anchor.GetAttributeValue("href", string.Empty));
             var name = anchorNodes.Select(anchor => anchor.GetAttributeValue("title", string.Empty));
 
-            return link.Zip(name, (links, names) => new MovieData() { Link = "https://www.themoviedb.org"+ links, Name = names }).ToList();
+            return link.Zip(name, (links, names) => new ObjectClasses.MovieData() { Link = "https://www.themoviedb.org" + links, Name = names }).ToList();
         }
 
         protected async void scrapeData(string item)
@@ -111,7 +84,6 @@ namespace Web_Movie_BI_Analytics
                 var homepageNode = webPage.DocumentNode.SelectSingleNode("//*[@id=\"left_column\"]/section[1]/p[6]/a");
                 var releaseDateNode = webPage.DocumentNode.SelectNodes("//*[@id=\"left_column\"]/section[1]/ul/li/text()");
 
-                
 
                 //Cast Nodes
                 var castNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/a");
@@ -157,7 +129,7 @@ namespace Web_Movie_BI_Analytics
                         movieDate += " " + date;
                     }
 
-                    release = movieDate;
+                    release = movieDate.Trim();
                     language = languageNode.InnerText;
                     runtime = runtimeNode.InnerText;
                     budget = budgetNode.InnerText;
@@ -170,20 +142,20 @@ namespace Web_Movie_BI_Analytics
                 }
 
                 //Cast & Crew Data
-                IEnumerable<Person> castZip = null;
+                IEnumerable<ObjectClasses.Person> castZip = null;
                 try
                 {
                     var castNameNumerable = castNameNode.Select(node => node.InnerText);
                     var castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
 
-                     castZip = castNameNumerable.Zip(castCharacterNumerable, (name, character) => new Person() { Name = name, Character = character });
+                    castZip = castNameNumerable.Zip(castCharacterNumerable, (name, character) => new ObjectClasses.Person() { Name = name, Character = character });
 
-                    foreach(var person in castZip)
+                    foreach (var person in castZip)
                     {
                         string name = person.Name;
                         string character = person.Character;
 
-                        listBox2.Items.Add(name+" "+character);
+                        listBox2.Items.Add(name + " " + character);
                     }
                 }
                 catch
@@ -191,7 +163,7 @@ namespace Web_Movie_BI_Analytics
                     ;
                 }
 
-                MovieData data = new MovieData
+                ObjectClasses.MovieData data = new ObjectClasses.MovieData
                 {
                     Name = movieName,
                     Year = year,
@@ -201,12 +173,12 @@ namespace Web_Movie_BI_Analytics
                     Runtime = runtime,
                     Budget = budget,
                     Revenue = revenue,
-                    Release = revenue,
+                    Release = release,
                     HomePage = homepage,
                     Cast = castZip
                 };
 
-                //mongoInsert(data);
+                // mongoDataProcessor.mongoInsert(data);
             }
             catch
             {
@@ -214,40 +186,40 @@ namespace Web_Movie_BI_Analytics
             }
         }
 
-        protected void mongoInsert(MovieData data)
-        {
-            var movieCollection = db.GetCollection<MovieData>("Movies");
-            movieCollection.InsertOne(data);
-            var movieList = movieCollection.Find(new BsonDocument()).ToList();
-        }
-
-        private async void button1_Click(object sender, EventArgs e)
+        private async void btnCrawl_Click(object sender, EventArgs e)
         {
             int pageNum = 0;
 
             int crawlCount = 0;
-            //Small Change
+
             var moviePages = await crawl(pageNum);
 
-                while(moviePages.Count > 0)
+            while (moviePages.Count > 0)
+            {
+                foreach (var moviePage in moviePages)
                 {
-                    foreach (var moviePage in moviePages)
-                    { 
-                        listBox1.Items.Add(moviePage.Link);
-                        scrapeData(moviePage.Link);
-                    }
-
-                    moviePages = await crawl(++pageNum);
-                    ++crawlCount;
-
-                    if (crawlCount == 1)
-                        break;
+                    listBox1.Items.Add(moviePage.Link);
+                    scrapeData(moviePage.Link);
                 }
+
+                moviePages = await crawl(++pageNum);
+                ++crawlCount;
+
+                if (crawlCount == 1)
+                    break;
+            }
         }
+
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mongoDataProcessor.retrieveMovies();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -483,5 +455,12 @@ namespace Web_Movie_BI_Analytics
         {
 
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
