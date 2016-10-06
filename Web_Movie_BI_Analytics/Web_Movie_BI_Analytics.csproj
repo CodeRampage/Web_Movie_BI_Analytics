@@ -53,6 +53,10 @@
       <HintPath>..\packages\Oracle.DataAccess.x86.2.112.1.0\lib\Oracle.DataAccess.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -102,6 +107,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Natural User Interface 2-104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Male-104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

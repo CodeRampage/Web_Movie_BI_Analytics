@@ -37,7 +37,7 @@ namespace Web_Movie_BI_Analytics
 
             string last = "";
 
-            label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
+           // label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
             //oracleDataProcessor.insertSysUser("Matimu","Matimu","Ngoveni","passit");            
         }
 
@@ -461,6 +461,46 @@ namespace Web_Movie_BI_Analytics
 
         }
 
-        
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            pictureBox2.Size = new Size(110, 89);
+        }
+
+        private void pictureBox2_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            pictureBox2.Size = new Size(70, 63);
+            pictureBox2.Location = new Point(893, 20);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(60, 53);
+            pictureBox2.Location = new Point(895, 22);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Would you like to exit the application?","Exit",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            pnlSignUp.Visible = true;
+            LoginContainer.Visible = false;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginContainer.Visible = true;
+            pnlSignUp.Visible = false;
+        }
+
+        private void linkLblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Please contact system Admin at zakes.musa@outlook.com","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }

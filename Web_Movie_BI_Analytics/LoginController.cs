@@ -20,6 +20,7 @@ namespace Web_Movie_BI_Analytics
         public void openConnection()
         {
             conn = new OracleConnection("Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=196.253.61.51)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCL))); User Id = IntelTechs; Password = umdeniwedb");
+            conn = new OracleConnection("intelTechs/umdeniwedb@196.253.61.51:1521/orcl");
             conn.Open();
         }
 
