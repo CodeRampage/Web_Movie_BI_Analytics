@@ -12,8 +12,6 @@ using HtmlAgilityPack;
 //Mongo References
 using MongoDB.Bson;
 using MongoDB.Driver;
-//Oracle References
-using Oracle.DataAccess.Client;
 
 namespace Web_Movie_BI_Analytics
 {
@@ -37,7 +35,7 @@ namespace Web_Movie_BI_Analytics
 
             string last = "";
 
-            label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
+            //label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
             //oracleDataProcessor.insertSysUser("Matimu","Matimu","Ngoveni","passit");            
         }
 
@@ -178,7 +176,7 @@ namespace Web_Movie_BI_Analytics
                     Cast = castZip
                 };
 
-                // mongoDataProcessor.mongoInsert(data);
+                //mongoDataProcessor.mongoInsert(data);
             }
             catch
             {
@@ -209,8 +207,6 @@ namespace Web_Movie_BI_Analytics
                     break;
             }
         }
-
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -453,14 +449,33 @@ namespace Web_Movie_BI_Analytics
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string username = txtBoxUsername.Text;
+                string pass = txtBoxPassword.Text;
+                string last = null;
 
+                string first_name = null;
+                first_name = sessionUser.userLogin(username, pass, ref last);
+
+                if (first_name== "null")
+                {
+                    MessageBox.Show("Incorrect username or password.");
+                }
+                else
+                {
+                    
+                }
+            }
+            catch
+            {
+                ;
+            }
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }
