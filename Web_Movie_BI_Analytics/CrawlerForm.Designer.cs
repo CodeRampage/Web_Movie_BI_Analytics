@@ -134,10 +134,10 @@
             // LoginPanel
             // 
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LoginPanel.Controls.Add(this.pnlDashboard);
             this.LoginPanel.Controls.Add(this.pictureBox2);
             this.LoginPanel.Controls.Add(this.LoginContainer);
             this.LoginPanel.Controls.Add(this.pnlSignUp);
-            this.LoginPanel.Controls.Add(this.pnlDashboard);
             this.LoginPanel.Location = new System.Drawing.Point(0, 0);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(984, 661);
