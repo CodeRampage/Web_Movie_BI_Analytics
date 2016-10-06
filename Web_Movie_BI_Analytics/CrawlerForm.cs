@@ -464,7 +464,9 @@ namespace Web_Movie_BI_Analytics
                 }
                 else
                 {
-                    
+                    pnlDashboard.Visible = true;
+                    LoginContainer.Visible = false;
+                    pnlSignUp.Visible = false;
                 }
             }
             catch
@@ -518,6 +520,18 @@ namespace Web_Movie_BI_Analytics
         private void linkLblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Please contact system Admin at zakes.musa@outlook.com","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void pnlDashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            pnlDashboard.Visible = false;
+            LoginContainer.Visible = true;
+            pnlSignUp.Visible = false;
         }
     }
 }
