@@ -71,6 +71,11 @@
             this.picBoxCrawler = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.picBoxDashComponents = new System.Windows.Forms.PictureBox();
+            this.pnlCrawler = new System.Windows.Forms.Panel();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.btnCrawler = new System.Windows.Forms.Button();
+            this.pnlDashHomeDesign = new System.Windows.Forms.Panel();
             this.pnlDashboardComponents = new System.Windows.Forms.Panel();
             this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -99,8 +104,6 @@
             this.rdbRemoveUser = new System.Windows.Forms.RadioButton();
             this.rdbAddUser = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.pnlCrawler = new System.Windows.Forms.Panel();
-            this.pnlDashHomeDesign = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LoginContainer = new System.Windows.Forms.Panel();
             this.BackDoor = new System.Windows.Forms.PictureBox();
@@ -124,9 +127,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnCrawler = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -138,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSystemManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCrawler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDashComponents)).BeginInit();
+            this.pnlCrawler.SuspendLayout();
             this.pnlDashboardComponents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
@@ -148,7 +150,6 @@
             this.pnlSystemManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).BeginInit();
             this.panel2.SuspendLayout();
-            this.pnlCrawler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LoginContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackDoor)).BeginInit();
@@ -437,6 +438,54 @@
             this.picBoxDashComponents.Size = new System.Drawing.Size(44, 42);
             this.picBoxDashComponents.TabIndex = 2;
             this.picBoxDashComponents.TabStop = false;
+            // 
+            // pnlCrawler
+            // 
+            this.pnlCrawler.BackColor = System.Drawing.Color.GhostWhite;
+            this.pnlCrawler.Controls.Add(this.button2);
+            this.pnlCrawler.Controls.Add(this.listBox4);
+            this.pnlCrawler.Controls.Add(this.listBox3);
+            this.pnlCrawler.Controls.Add(this.btnCrawler);
+            this.pnlCrawler.Location = new System.Drawing.Point(295, 93);
+            this.pnlCrawler.Name = "pnlCrawler";
+            this.pnlCrawler.Size = new System.Drawing.Size(689, 568);
+            this.pnlCrawler.TabIndex = 3;
+            this.pnlCrawler.Visible = false;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(394, 45);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(229, 251);
+            this.listBox4.TabIndex = 4;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(41, 45);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(229, 251);
+            this.listBox3.TabIndex = 3;
+            // 
+            // btnCrawler
+            // 
+            this.btnCrawler.Location = new System.Drawing.Point(297, 380);
+            this.btnCrawler.Name = "btnCrawler";
+            this.btnCrawler.Size = new System.Drawing.Size(75, 23);
+            this.btnCrawler.TabIndex = 2;
+            this.btnCrawler.Text = "crawl";
+            this.btnCrawler.UseVisualStyleBackColor = true;
+            this.btnCrawler.Click += new System.EventHandler(this.btnCrawler_Click);
+            // 
+            // pnlDashHomeDesign
+            // 
+            this.pnlDashHomeDesign.BackColor = System.Drawing.Color.GhostWhite;
+            this.pnlDashHomeDesign.Location = new System.Drawing.Point(295, 93);
+            this.pnlDashHomeDesign.Name = "pnlDashHomeDesign";
+            this.pnlDashHomeDesign.Size = new System.Drawing.Size(689, 568);
+            this.pnlDashHomeDesign.TabIndex = 5;
+            this.pnlDashHomeDesign.Visible = false;
             // 
             // pnlDashboardComponents
             // 
@@ -777,27 +826,6 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Commit data";
             // 
-            // pnlCrawler
-            // 
-            this.pnlCrawler.BackColor = System.Drawing.Color.GhostWhite;
-            this.pnlCrawler.Controls.Add(this.listBox4);
-            this.pnlCrawler.Controls.Add(this.listBox3);
-            this.pnlCrawler.Controls.Add(this.btnCrawler);
-            this.pnlCrawler.Location = new System.Drawing.Point(295, 93);
-            this.pnlCrawler.Name = "pnlCrawler";
-            this.pnlCrawler.Size = new System.Drawing.Size(689, 568);
-            this.pnlCrawler.TabIndex = 3;
-            this.pnlCrawler.Visible = false;
-            // 
-            // pnlDashHomeDesign
-            // 
-            this.pnlDashHomeDesign.BackColor = System.Drawing.Color.GhostWhite;
-            this.pnlDashHomeDesign.Location = new System.Drawing.Point(295, 93);
-            this.pnlDashHomeDesign.Name = "pnlDashHomeDesign";
-            this.pnlDashHomeDesign.Size = new System.Drawing.Size(689, 568);
-            this.pnlDashHomeDesign.TabIndex = 5;
-            this.pnlDashHomeDesign.Visible = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.exit__1_;
@@ -1078,30 +1106,15 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // btnCrawler
+            // button2
             // 
-            this.btnCrawler.Location = new System.Drawing.Point(297, 380);
-            this.btnCrawler.Name = "btnCrawler";
-            this.btnCrawler.Size = new System.Drawing.Size(75, 23);
-            this.btnCrawler.TabIndex = 2;
-            this.btnCrawler.Text = "crawl";
-            this.btnCrawler.UseVisualStyleBackColor = true;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(41, 45);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(229, 251);
-            this.listBox3.TabIndex = 3;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(394, 45);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(229, 251);
-            this.listBox4.TabIndex = 4;
+            this.button2.Location = new System.Drawing.Point(548, 380);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Scrape";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CrawlerForm
             // 
@@ -1131,6 +1144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSystemManagement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCrawler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDashComponents)).EndInit();
+            this.pnlCrawler.ResumeLayout(false);
             this.pnlDashboardComponents.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
@@ -1143,7 +1157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.pnlCrawler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.LoginContainer.ResumeLayout(false);
             this.LoginContainer.PerformLayout();
@@ -1241,6 +1254,7 @@
         private System.Windows.Forms.Button btnCrawler;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

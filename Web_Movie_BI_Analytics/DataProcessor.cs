@@ -54,6 +54,7 @@ namespace Web_Movie_BI_Analytics
                 string budget = null;
                 string revenue = null;
                 string genre = null;
+                string releaseStatus = null;
 
                 IEnumerable<ObjectClasses.Person> cast = null;
 
@@ -73,8 +74,9 @@ namespace Web_Movie_BI_Analytics
                             revenue = doc.Revenue;
                             cast = doc.Cast;
                             genre = doc.Genre;
+                            releaseStatus = doc.ReleaseStatus;
 
-                            pump.movieInsert(doc.Name,doc.Year,"Released",doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
+                            pump.movieInsert(doc.Name,doc.Year, releaseStatus , doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
 
                             foreach (var star in cast)
                             {
@@ -131,8 +133,15 @@ namespace Web_Movie_BI_Analytics
                 revenue = Regex.Replace(revenue, @"[$.\n,]", "");
                 revenue = revenue.Substring(0, revenue.Length - 2);
                 revenue = revenue.Trim();
-                
-                
+
+                if (release == null)
+                    release = "Unknown";
+                release = release.Trim();
+
+                if (genre == null)
+                    genre = "No genre";
+
+
                 int movie_budget = 0;
                 int movie_revenue = 0;
 
@@ -148,7 +157,7 @@ namespace Web_Movie_BI_Analytics
 
                 int total_cost = 0;
 
-                if (movie_revenue>0)
+                if (movie_revenue>=0)
                     total_cost = movie_revenue - movie_budget;
 
                 openConnection();
