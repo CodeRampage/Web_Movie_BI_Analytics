@@ -99,6 +99,7 @@ namespace Web_Movie_BI_Analytics
                 //Cast Nodes
                 var castNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/a");
                 var castCharacterNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/span");
+                var castLinkNode = webPage.DocumentNode.SelectSingleNode("//*[@id=\"main_column\"]/ol[1]/li[1]/div/p/a");
 
                 {
                     //Crew Nodes
@@ -126,6 +127,7 @@ namespace Web_Movie_BI_Analytics
                 string revenue = null;
                 string homepage = null;
                 string genre = null;
+                string castLink = null;
 
                 //Movie Data
                 try
@@ -157,13 +159,45 @@ namespace Web_Movie_BI_Analytics
                 }
 
                 //Cast & Crew Data
+                castLink = castLinkNode.GetAttributeValue("href", string.Empty);
+                castLink = movieLink + castLink;
+
+                var actorPage = await Task.Factory.StartNew(() => web.Load(movieLink + castLink));
+               
+
                 IEnumerable<ObjectClasses.Person> castZip = null;
+                IEnumerable<ObjectClasses.Person> actorZip = null;
+                IEnumerable<ObjectClasses.MovieData> castFinalZip = null;
                 try
                 {
-                    var castNameNumerable = castNameNode.Select(node => node.InnerText);
-                    var castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
+                    var genderNode = actorPage.DocumentNode.SelectNodes("//*[@id=\"media_v4\"]/div/section/p[1]/text()");
+                    var birthNode = actorPage.DocumentNode.SelectNodes("//*[@id=\"media_v4\"]/div/section/p[4]/text()");
+                    var creditsNode = actorPage.DocumentNode.SelectNodes("//*[@id=\"media_v4\"]/div/section/p[2]/text()");
+
+                    IEnumerable<string> castNameNumerable = null;
+                    IEnumerable<string> castCharacterNumerable = null;
+                    IEnumerable<string> castGenderNumerable = null;
+                    IEnumerable<string> birthNumerable = null;
+                    IEnumerable<string> creditsNumerable = null;
+                    try
+                    {
+                        castNameNumerable = castNameNode.Select(node => node.InnerText);
+                        castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
+                        castGenderNumerable = genderNode.Select(node => node.InnerText);
+                        birthNumerable = birthNode.Select(node => node.InnerText);
+                        creditsNumerable = creditsNode.Select(node => node.InnerText);
+                    }
+                    catch
+                    {
+                        ;
+                    }
 
                     castZip = castNameNumerable.Zip(castCharacterNumerable, (name, character) => new ObjectClasses.Person() { Name = name, Character = character });
+                    actorZip = castGenderNumerable.Zip(birthNumerable, (gender, birth) => new ObjectClasses.Person() { BirthDay = birth, Gender = gender });
+
+                    //actorZip = creditsNumerable.Zip(actorZip, (credits, actor) => new ObjectClasses.Person() { Credits = credits });
+
+                    //castFinalZip = castZip.Zip(actorZip,(cast,actor) => new ObjectClasses.MovieData() { Cast = castZip});
 
                     foreach (var person in castZip)
                     {
@@ -172,6 +206,16 @@ namespace Web_Movie_BI_Analytics
 
                         listBox4.Items.Add(name + " " + character);
                     }
+
+                    //foreach (var person in castFinalZip)
+                    //{
+                    //    castZip = person.Cast;
+
+                    //    foreach (ObjectClasses.Person p in castZip)
+                    //    {
+                    //        listBox4.Items.Add(p.Name);
+                    //    }
+                    //}
                 }
                 catch
                 {
@@ -196,7 +240,7 @@ namespace Web_Movie_BI_Analytics
                     Cast = castZip
                 };
 
-                mongoDataProcessor.mongoInsert(data);
+                //mongoDataProcessor.mongoInsert(data);
             }
             catch
             {

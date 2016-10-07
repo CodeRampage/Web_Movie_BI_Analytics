@@ -76,11 +76,11 @@ namespace Web_Movie_BI_Analytics
                             genre = doc.Genre;
                             releaseStatus = doc.ReleaseStatus;
 
-                            pump.movieInsert(doc.Name,doc.Year, releaseStatus , doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
+                            //pump.movieInsert(doc.Name,doc.Year, releaseStatus , doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
 
                             foreach (var star in cast)
                             {
-                                await Task.Factory.StartNew(() => pump.castInsert(star.Name,star.Character));
+                                //await Task.Factory.StartNew(() => pump.castInsert(star.Name,star.Character));
                             }
                         }
                     }
@@ -140,7 +140,6 @@ namespace Web_Movie_BI_Analytics
 
                 if (genre == null)
                     genre = "No genre";
-
 
                 int movie_budget = 0;
                 int movie_revenue = 0;
