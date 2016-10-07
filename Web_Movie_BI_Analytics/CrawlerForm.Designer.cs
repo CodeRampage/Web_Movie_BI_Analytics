@@ -333,9 +333,9 @@
             // 
             this.pictureBox5.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.zakes;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 42);
+            this.pictureBox5.Location = new System.Drawing.Point(0, 45);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(230, 169);
+            this.pictureBox5.Size = new System.Drawing.Size(305, 220);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 

@@ -76,7 +76,7 @@ namespace Web_Movie_BI_Analytics
 
                             foreach (var star in cast)
                             {
-                                pump.castInsert(star.Name,star.Character);
+                                await Task.Factory.StartNew(() =>pump.castInsert(star.Name,star.Character));
                             }
                         }
                     }

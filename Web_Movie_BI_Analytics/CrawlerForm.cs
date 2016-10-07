@@ -50,7 +50,7 @@ namespace Web_Movie_BI_Analytics
 
             string last = "";
 
-            label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
+            label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last,ref user_type) + " " + last;
             //oracleDataProcessor.insertSysUser("Matimu","Matimu","Ngoveni","passit");            
         }
 
@@ -469,7 +469,7 @@ namespace Web_Movie_BI_Analytics
                 string username = txtBoxUsername.Text;
                 string pass = txtBoxPassword.Text;
                 
-                fname = sessionUser.userLogin(username, pass, ref lname);
+                fname = sessionUser.userLogin(username, pass, ref lname,ref user_type);
 
                 if (fname== "null")
                 {
@@ -481,6 +481,7 @@ namespace Web_Movie_BI_Analytics
                     LoginContainer.Visible = false;
                     pnlSignUp.Visible = false;
                     lblUserLogedIn.Text = fname + " " + lname;
+                    lblTypeOfUserLoggedIn.Text = user_type;
                 }
             }
             catch
@@ -513,7 +514,7 @@ namespace Web_Movie_BI_Analytics
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Would you like to exit the application?","Exit",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Do you really want to Exit the Application?","Exit Confirm Dialog",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -533,7 +534,7 @@ namespace Web_Movie_BI_Analytics
 
         private void linkLblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Please contact system Admin at Zakes.Musa@hotmail.com\n\t\t for your password","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Please contact system Admin at Zakes.Musa@hotmail.com\n\t\t for your password","Forgot Password Dialog",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void pnlDashboard_Paint(object sender, PaintEventArgs e)
@@ -543,7 +544,7 @@ namespace Web_Movie_BI_Analytics
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Do you really want to sign out?","Question",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Do you really want to sign out?","Confirm Sign Out Dialog",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 pnlDashboard.Visible = false;
                 LoginContainer.Visible = true;

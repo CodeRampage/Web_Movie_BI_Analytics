@@ -28,7 +28,7 @@ namespace Web_Movie_BI_Analytics
             conn.Close();
         }
 
-        public string userLogin(string user, string pass, ref string last)
+        public string userLogin(string user, string pass, ref string last,ref string user_type)
         {
             openConnection();
             using (conn)
@@ -39,10 +39,12 @@ namespace Web_Movie_BI_Analytics
                 cmd.Parameters.Add("pass", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = pass;
                 cmd.Parameters.Add("user_f", OracleDbType.Varchar2, 200).Direction = System.Data.ParameterDirection.Output;
                 cmd.Parameters.Add("user_l", OracleDbType.Varchar2, 200).Direction = System.Data.ParameterDirection.Output;
+                cmd.Parameters.Add("user_t", OracleDbType.Varchar2, 200).Direction = System.Data.ParameterDirection.Output;
                 cmd.ExecuteNonQuery();
 
                 string fname = cmd.Parameters["user_f"].Value.ToString();
                 last = cmd.Parameters["user_l"].Value.ToString();
+                user_type = cmd.Parameters["user_t"].Value.ToString();
                 conn.Close();
                 return fname;
             }
