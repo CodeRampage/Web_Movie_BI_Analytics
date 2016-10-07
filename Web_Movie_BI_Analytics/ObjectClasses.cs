@@ -23,6 +23,7 @@ namespace Web_Movie_BI_Analytics
             public string Revenue { get; set; }
             public string HomePage { get; set; }
             public string Release { get; set; }
+            public string Genre { get; set; }
 
             public IEnumerable<Person> Cast { get; set; }
         }

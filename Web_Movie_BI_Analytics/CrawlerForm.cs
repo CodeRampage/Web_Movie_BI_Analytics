@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//HTML Agility Pack References
 using HtmlAgilityPack;
-//Mongo References
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -96,8 +94,9 @@ namespace Web_Movie_BI_Analytics
                 var revenueNode = webPage.DocumentNode.SelectSingleNode("//*[@id=\"left_column\"]/section[1]/p[5]/text()");
                 var homepageNode = webPage.DocumentNode.SelectSingleNode("//*[@id=\"left_column\"]/section[1]/p[6]/a");
                 var releaseDateNode = webPage.DocumentNode.SelectNodes("//*[@id=\"left_column\"]/section[1]/ul/li/text()");
+                var genreNode = webPage.DocumentNode.SelectSingleNode("//*[@id=\"left_column\"]/section[2]/ul/li[1]/a");
 
-
+                
                 //Cast Nodes
                 var castNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/a");
                 var castCharacterNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/span");
@@ -126,6 +125,7 @@ namespace Web_Movie_BI_Analytics
                 string budget = null;
                 string revenue = null;
                 string homepage = null;
+                string genre = null;
 
                 //Movie Data
                 try
@@ -148,6 +148,7 @@ namespace Web_Movie_BI_Analytics
                     budget = budgetNode.InnerText;
                     revenue = revenueNode.InnerText;
                     homepage = homepageNode.InnerText;
+                    genre = genreNode.InnerText;
                 }
                 catch
                 {
@@ -188,6 +189,7 @@ namespace Web_Movie_BI_Analytics
                     Revenue = revenue,
                     Release = release,
                     HomePage = homepage,
+                    Genre = genre,
                     Cast = castZip
                 };
 

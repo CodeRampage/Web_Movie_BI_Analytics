@@ -53,6 +53,7 @@ namespace Web_Movie_BI_Analytics
                 string runtime = null;
                 string budget = null;
                 string revenue = null;
+                string genre = null;
 
                 IEnumerable<ObjectClasses.Person> cast = null;
 
@@ -71,12 +72,13 @@ namespace Web_Movie_BI_Analytics
                             budget = doc.Budget;
                             revenue = doc.Revenue;
                             cast = doc.Cast;
+                            genre = doc.Genre;
 
-                            pump.movieInsert(doc.Name,doc.Year,"Released",doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,"Genre");
+                            pump.movieInsert(doc.Name,doc.Year,"Released",doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
 
                             foreach (var star in cast)
                             {
-                                await Task.Factory.StartNew(() =>pump.castInsert(star.Name,star.Character));
+                                await Task.Factory.StartNew(() => pump.castInsert(star.Name,star.Character));
                             }
                         }
                     }
