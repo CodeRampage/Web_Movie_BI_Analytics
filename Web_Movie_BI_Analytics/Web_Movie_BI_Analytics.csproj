@@ -59,6 +59,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -125,6 +126,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back-left-arrow-outline-symbol-in-black-circular-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuration-cogwheel-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cascade-visualization-option-interface-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zakes.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spider %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-international-educational-service-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filmroll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -22,6 +22,15 @@ namespace Web_Movie_BI_Analytics
         DataProcessor.Mongo mongoDataProcessor;
         DataProcessor.Oracle oracleDataProcessor;
 
+        //The timer
+        Timer t = new Timer();
+        int interval = 0;
+
+        //Variables for menue design
+        int CrawlerCounterId = 0;
+        int DashboardCounterId = 0;
+        int SystemSettingsCounterId = 0;
+
         //Classes from other libraries
         HtmlWeb web = new HtmlWeb();
 
@@ -488,13 +497,13 @@ namespace Web_Movie_BI_Analytics
         private void pictureBox2_MouseMove_1(object sender, MouseEventArgs e)
         {
             pictureBox2.Size = new Size(70, 63);
-            pictureBox2.Location = new Point(893, 20);
+            pictureBox2.Location = new Point(898, 589);
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Size = new Size(60, 53);
-            pictureBox2.Location = new Point(895, 22);
+            pictureBox2.Location = new Point(900, 591);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -529,9 +538,245 @@ namespace Web_Movie_BI_Analytics
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            pnlDashboard.Visible = false;
-            LoginContainer.Visible = true;
-            pnlSignUp.Visible = false;
+            if(MessageBox.Show("Do you really want to sign out?","Question",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                pnlDashboard.Visible = false;
+                LoginContainer.Visible = true;
+                pnlSignUp.Visible = false;
+            }            
+        }
+
+        private void BackDoor_MouseDown(object sender, MouseEventArgs e)
+        {
+            t.Interval = 1000; // specify interval time as you want
+            t.Tick += new EventHandler(timer_Tick);
+            t.Start();
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            counter();
+
+            if (interval > 10)
+            {
+                pnlDashboard.Visible = true;
+            }
+        }
+
+        private void BackDoor_MouseUp(object sender, MouseEventArgs e)
+        {
+            t.Stop();
+        }
+
+        private int counter()
+        {
+            interval++;
+
+            return interval;
+        }
+
+        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
+        {
+            pictureBox4.Size = new Size(71, 73);
+            pictureBox4.Location = new Point(909, 10);
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(61, 63);
+            pictureBox4.Location = new Point(911, 12);
+        }
+
+        private void lblSystemManagement_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 16);
+        }
+
+        private void lblSystemManagement_MouseLeave(object sender, EventArgs e)
+        {
+            if (SystemSettingsCounterId == 0)
+            {
+                lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 14);
+            }
+        }
+
+        private void lblSystemManagement_MouseClick(object sender, MouseEventArgs e)
+        {
+            //picBoxSystemManagement.Size = new Size(44, 42);
+            //picBoxSystemManagement.Location = new Point(48, 546);
+        }
+
+        private void lblSystemManagement_Click(object sender, EventArgs e)
+        {
+            picBoxSystemManagement.Size = new Size(54, 52);
+            picBoxSystemManagement.Location = new Point(40, 540);
+            lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 16);
+
+            SystemSettingsCounterId++;
+            DashboardCounterId = 0;
+            CrawlerCounterId = 0;
+
+            picBoxDashComponents.Size = new Size(44, 42);
+            picBoxDashComponents.Location = new Point(48, 471);
+            label4.Font = new Font(label4.Font.FontFamily, 14);
+
+            picBoxCrawler.Size = new Size(44, 42);
+            picBoxCrawler.Location = new Point(48, 399);
+            label6.Font = new Font(label6.Font.FontFamily, 14);
+
+            pnlCrawler.Visible = false;
+            pnlDashboardComponents.Visible = false;
+            pnlDashHomeDesign.Visible = false;
+            pnlSystemManagement.Visible = true;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            picBoxSystemManagement.Size = new Size(44, 42);
+            picBoxSystemManagement.Location = new Point(40, 540);
+            lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 14);
+
+            picBoxDashComponents.Size = new Size(54, 52);
+            picBoxDashComponents.Location = new Point(48, 471);
+            label4.Font = new Font(label4.Font.FontFamily, 16);
+
+            DashboardCounterId++;
+            CrawlerCounterId = 0;
+            SystemSettingsCounterId = 0;
+
+            picBoxCrawler.Size = new Size(44, 42);
+            picBoxCrawler.Location = new Point(48, 399);
+            label6.Font = new Font(label6.Font.FontFamily, 14);
+
+            pnlCrawler.Visible = false;
+            pnlDashboardComponents.Visible = true;
+            pnlDashHomeDesign.Visible = false;
+            pnlSystemManagement.Visible = false;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            picBoxSystemManagement.Size = new Size(44, 42);
+            picBoxSystemManagement.Location = new Point(40, 540);
+            lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 14);
+
+            picBoxDashComponents.Size = new Size(44, 42);
+            picBoxDashComponents.Location = new Point(48, 471);
+            label4.Font = new Font(label4.Font.FontFamily, 14);
+
+            picBoxCrawler.Size = new Size(54, 52);
+            picBoxCrawler.Location = new Point(48, 399);
+            label6.Font = new Font(label6.Font.FontFamily, 16);
+
+            CrawlerCounterId++;
+            DashboardCounterId = 0;
+            SystemSettingsCounterId = 0;
+
+            pnlCrawler.Visible = true;
+            pnlDashboardComponents.Visible = false;
+            pnlDashHomeDesign.Visible = false;
+            pnlSystemManagement.Visible = false;
+        }
+
+        private void label4_MouseMove(object sender, MouseEventArgs e)
+        {
+            label4.Font = new Font(label4.Font.FontFamily, 16);
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            if (DashboardCounterId == 0)
+            {
+                label4.Font = new Font(label4.Font.FontFamily, 14);
+            }
+        }
+
+        private void label6_MouseMove(object sender, MouseEventArgs e)
+        {            
+            label6.Font = new Font(label6.Font.FontFamily, 16);                   
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+            if (CrawlerCounterId == 0)
+            {
+                label6.Font = new Font(label6.Font.FontFamily, 14);
+            }           
+        }
+
+        private void rdbAddUser_CheckedChanged(object sender, EventArgs e)
+        {
+            dropUserToDeleteOrEdit.Visible = false;
+            btnDeleteSystemUser.Visible = false;
+
+            txtSystemUserFirstName.Visible = true;
+            txtSystemuserLastName.Visible = true;
+            txtSystemUserPassword.Visible = true;
+            txtSystemUserConfirmPass.Visible = true;
+            DropTypeOfUser.Visible = true;
+
+            label5.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
+
+            btnCommitData.Visible = true;
+            label11.Visible = true;
+        }
+
+        private void rdbEditUser_CheckedChanged(object sender, EventArgs e)
+        {
+            dropUserToDeleteOrEdit.Visible = true;
+            btnDeleteSystemUser.Visible = false;
+
+            txtSystemUserFirstName.Visible = true;
+            txtSystemuserLastName.Visible = true;
+            txtSystemUserPassword.Visible = true;
+            txtSystemUserConfirmPass.Visible = true;
+            DropTypeOfUser.Visible = true;
+
+            label5.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
+
+            btnCommitData.Visible = true;
+            label11.Visible = true;
+        }
+
+        private void rdbRemoveUser_CheckedChanged(object sender, EventArgs e)
+        {
+            dropUserToDeleteOrEdit.Visible = true;
+            btnDeleteSystemUser.Visible = true;
+
+            txtSystemUserFirstName.Visible = false;
+            txtSystemuserLastName.Visible = false;
+            txtSystemUserPassword.Visible = false;
+            txtSystemUserConfirmPass.Visible = false;
+            DropTypeOfUser.Visible = false;
+
+            label5.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+
+            btnCommitData.Visible = false;
+            label11.Visible = false;
+        }
+
+        private void btnCommitData_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnCommitData.Size = new Size(52, 52);
+            btnCommitData.Location = new Point(453, 462);
+        }
+
+        private void btnCommitData_MouseLeave(object sender, EventArgs e)
+        {
+            btnCommitData.Size = new Size(42, 42);
+            btnCommitData.Location = new Point(455, 464);
         }
     }
 }
