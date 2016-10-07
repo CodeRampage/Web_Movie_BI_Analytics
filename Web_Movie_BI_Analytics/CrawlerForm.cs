@@ -96,7 +96,6 @@ namespace Web_Movie_BI_Analytics
                 var releaseDateNode = webPage.DocumentNode.SelectNodes("//*[@id=\"left_column\"]/section[1]/ul/li/text()");
                 var genreNode = webPage.DocumentNode.SelectSingleNode("//*[@id=\"left_column\"]/section[2]/ul/li[1]/a");
 
-                
                 //Cast Nodes
                 var castNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/a");
                 var castCharacterNameNode = webPage.DocumentNode.SelectNodes("//*[@id=\"main_column\"]/ol[1]/li/div/p/span");
@@ -120,6 +119,7 @@ namespace Web_Movie_BI_Analytics
                 string rating = null;
                 string overview = null;
                 string release = null;
+                string releaseStatus = null;
                 string language = null;
                 string runtime = null;
                 string budget = null;
@@ -143,6 +143,7 @@ namespace Web_Movie_BI_Analytics
                     }
 
                     release = movieDate.Trim();
+                    releaseStatus = releaseStatusNode.InnerText;
                     language = languageNode.InnerText;
                     runtime = runtimeNode.InnerText;
                     budget = budgetNode.InnerText;
@@ -169,7 +170,7 @@ namespace Web_Movie_BI_Analytics
                         string name = person.Name;
                         string character = person.Character;
 
-                        listBox2.Items.Add(name + " " + character);
+                        listBox4.Items.Add(name + " " + character);
                     }
                 }
                 catch
@@ -179,6 +180,7 @@ namespace Web_Movie_BI_Analytics
 
                 ObjectClasses.MovieData data = new ObjectClasses.MovieData
                 {
+                    Link = movieLink,
                     Name = movieName,
                     Year = year,
                     Rating = rating,
@@ -188,12 +190,13 @@ namespace Web_Movie_BI_Analytics
                     Budget = budget,
                     Revenue = revenue,
                     Release = release,
+                    ReleaseStatus = releaseStatus,
                     HomePage = homepage,
                     Genre = genre,
                     Cast = castZip
                 };
 
-                //mongoDataProcessor.mongoInsert(data);
+                mongoDataProcessor.mongoInsert(data);
             }
             catch
             {
@@ -854,6 +857,35 @@ namespace Web_Movie_BI_Analytics
         private void btnCommitData_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void btnCrawler_Click(object sender, EventArgs e)
+        {
+            int pageNum = 0;
+
+            int crawlCount = 0;
+
+            var moviePages = await crawl(pageNum);
+
+            while (moviePages.Count > 0)
+            {
+                foreach (var moviePage in moviePages)
+                {
+                    listBox3.Items.Add(moviePage.Link);
+                    scrapeData(moviePage.Link);
+                }
+
+                moviePages = await crawl(++pageNum);
+                ++crawlCount;
+
+                if (crawlCount == 1)
+                    break;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mongoDataProcessor.retrieveMovies();
         }
     }
 }

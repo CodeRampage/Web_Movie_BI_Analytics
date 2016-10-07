@@ -24,6 +24,7 @@ namespace Web_Movie_BI_Analytics
             public string HomePage { get; set; }
             public string Release { get; set; }
             public string Genre { get; set; }
+            public string ReleaseStatus { get; set; }
 
             public IEnumerable<Person> Cast { get; set; }
         }
