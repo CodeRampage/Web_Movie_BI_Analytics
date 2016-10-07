@@ -160,67 +160,64 @@ namespace Web_Movie_BI_Analytics
 
                 //Cast & Crew Data
                 castLink = castLinkNode.GetAttributeValue("href", string.Empty);
-                castLink = movieLink + castLink;
+                castLink = "https://www.themoviedb.org" + castLink;
 
-                var actorPage = await Task.Factory.StartNew(() => web.Load(movieLink + castLink));
-               
+                var actorPage = await Task.Factory.StartNew(() => web.Load(castLink));
 
-                IEnumerable<ObjectClasses.Person> castZip = null;
-                IEnumerable<ObjectClasses.Person> actorZip = null;
-                IEnumerable<ObjectClasses.MovieData> castFinalZip = null;
+
+                IEnumerable<ObjectClasses.Person> zipCast = null;
                 try
                 {
                     var genderNode = actorPage.DocumentNode.SelectNodes("//*[@id=\"media_v4\"]/div/section/p[1]/text()");
                     var birthNode = actorPage.DocumentNode.SelectNodes("//*[@id=\"media_v4\"]/div/section/p[4]/text()");
                     var creditsNode = actorPage.DocumentNode.SelectNodes("//*[@id=\"media_v4\"]/div/section/p[2]/text()");
 
-                    IEnumerable<string> castNameNumerable = null;
-                    IEnumerable<string> castCharacterNumerable = null;
-                    IEnumerable<string> castGenderNumerable = null;
-                    IEnumerable<string> birthNumerable = null;
-                    IEnumerable<string> creditsNumerable = null;
-                    try
-                    {
-                        castNameNumerable = castNameNode.Select(node => node.InnerText);
-                        castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
-                        castGenderNumerable = genderNode.Select(node => node.InnerText);
-                        birthNumerable = birthNode.Select(node => node.InnerText);
-                        creditsNumerable = creditsNode.Select(node => node.InnerText);
-                    }
-                    catch
-                    {
-                        ;
-                    }
+                    var genderNumerable = genderNode.Select(node => node.InnerText);
+                    var birthNumerable = birthNode.Select(node => node.InnerText);
+                    var creditsNumerable = creditsNode.Select(node => node.InnerText);
 
-                    castZip = castNameNumerable.Zip(castCharacterNumerable, (name, character) => new ObjectClasses.Person() { Name = name, Character = character });
-                    actorZip = castGenderNumerable.Zip(birthNumerable, (gender, birth) => new ObjectClasses.Person() { BirthDay = birth, Gender = gender });
+                    var castNameNumerable = castNameNode.Select(node => node.InnerText);
+                    var castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
 
-                    //actorZip = creditsNumerable.Zip(actorZip, (credits, actor) => new ObjectClasses.Person() { Credits = credits });
 
-                    //castFinalZip = castZip.Zip(actorZip,(cast,actor) => new ObjectClasses.MovieData() { Cast = castZip});
+                    zipCast = genderNumerable.Zip(birthNumerable, (first, second) => new ObjectClasses.Person() { Gender = first, BirthDay = second }).Zip(
+                        creditsNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthDay = first.BirthDay, Credits = second }).Zip(
+                        castNameNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthDay = first.BirthDay, Credits = first.Credits, Name = second }).Zip(
+                        castCharacterNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthDay = first.BirthDay, Credits = first.Credits, Name = first.Name, Character = second });
 
-                    foreach (var person in castZip)
+                    foreach (var person in zipCast)
                     {
                         string name = person.Name;
                         string character = person.Character;
 
-                        listBox4.Items.Add(name + " " + character);
+                        listBox4.Items.Add(name + " " + character+" "+person.BirthDay+" "+person.Gender);
                     }
-
-                    //foreach (var person in castFinalZip)
-                    //{
-                    //    castZip = person.Cast;
-
-                    //    foreach (ObjectClasses.Person p in castZip)
-                    //    {
-                    //        listBox4.Items.Add(p.Name);
-                    //    }
-                    //}
                 }
                 catch
                 {
                     ;
                 }
+
+                //IEnumerable<ObjectClasses.Person> castZip = null;
+                //try
+                //{
+                //     var castNameNumerable = castNameNode.Select(node => node.InnerText);
+                //     var castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
+
+                //    castZip = castNameNumerable.Zip(castCharacterNumerable, (name, character) => new ObjectClasses.Person() { Name = name, Character = character });
+
+                //    foreach (var person in castZip)
+                //    {
+                //        string name = person.Name;
+                //        string character = person.Character;
+
+                //        listBox4.Items.Add(name + " " + character);
+                //    }
+                //}
+                //catch
+                //{
+                //    ;
+                //}
 
                 ObjectClasses.MovieData data = new ObjectClasses.MovieData
                 {
@@ -237,7 +234,7 @@ namespace Web_Movie_BI_Analytics
                     ReleaseStatus = releaseStatus,
                     HomePage = homepage,
                     Genre = genre,
-                    Cast = castZip
+                    Cast = zipCast
                 };
 
                 //mongoDataProcessor.mongoInsert(data);
@@ -903,7 +900,17 @@ namespace Web_Movie_BI_Analytics
 
         }
 
-        private async void btnCrawler_Click(object sender, EventArgs e)
+        private  void btnCrawler_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mongoDataProcessor.retrieveMovies();
+        }
+
+        private async void btnCrawler_Click_1(object sender, EventArgs e)
         {
             int pageNum = 0;
 
@@ -925,11 +932,6 @@ namespace Web_Movie_BI_Analytics
                 if (crawlCount == 1)
                     break;
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            mongoDataProcessor.retrieveMovies();
         }
     }
 }
