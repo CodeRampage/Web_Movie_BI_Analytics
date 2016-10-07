@@ -34,6 +34,12 @@ namespace Web_Movie_BI_Analytics
         //Classes from other libraries
         HtmlWeb web = new HtmlWeb();
 
+
+        //User session variables
+        string fname = null;
+        string lname = null;
+        string user_type = null;
+
         public CrawlerForm()
         {
             InitializeComponent();
@@ -462,12 +468,10 @@ namespace Web_Movie_BI_Analytics
             {
                 string username = txtBoxUsername.Text;
                 string pass = txtBoxPassword.Text;
-                string last = null;
+                
+                fname = sessionUser.userLogin(username, pass, ref lname);
 
-                string first_name = null;
-                first_name = sessionUser.userLogin(username, pass, ref last);
-
-                if (first_name== "null")
+                if (fname== "null")
                 {
                     MessageBox.Show("Incorrect username or password.");
                 }
@@ -476,6 +480,7 @@ namespace Web_Movie_BI_Analytics
                     pnlDashboard.Visible = true;
                     LoginContainer.Visible = false;
                     pnlSignUp.Visible = false;
+                    lblUserLogedIn.Text = fname + " " + lname;
                 }
             }
             catch
@@ -528,7 +533,7 @@ namespace Web_Movie_BI_Analytics
 
         private void linkLblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Please contact system Admin at zakes.musa@outlook.com","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Please contact system Admin at Zakes.Musa@hotmail.com\n\t\t for your password","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void pnlDashboard_Paint(object sender, PaintEventArgs e)

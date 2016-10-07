@@ -123,6 +123,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -256,6 +257,7 @@
             // pnlDashMenu
             // 
             this.pnlDashMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(108)))), ((int)(((byte)(137)))));
+            this.pnlDashMenu.Controls.Add(this.label14);
             this.pnlDashMenu.Controls.Add(this.lblTypeOfUserLoggedIn);
             this.pnlDashMenu.Controls.Add(this.label12);
             this.pnlDashMenu.Controls.Add(this.label13);
@@ -277,44 +279,44 @@
             // lblTypeOfUserLoggedIn
             // 
             this.lblTypeOfUserLoggedIn.AutoSize = true;
-            this.lblTypeOfUserLoggedIn.Font = new System.Drawing.Font("Perpetua", 10.25F);
+            this.lblTypeOfUserLoggedIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.lblTypeOfUserLoggedIn.ForeColor = System.Drawing.Color.White;
-            this.lblTypeOfUserLoggedIn.Location = new System.Drawing.Point(160, 314);
+            this.lblTypeOfUserLoggedIn.Location = new System.Drawing.Point(55, 326);
             this.lblTypeOfUserLoggedIn.Name = "lblTypeOfUserLoggedIn";
-            this.lblTypeOfUserLoggedIn.Size = new System.Drawing.Size(113, 16);
+            this.lblTypeOfUserLoggedIn.Size = new System.Drawing.Size(168, 20);
             this.lblTypeOfUserLoggedIn.TabIndex = 16;
             this.lblTypeOfUserLoggedIn.Text = "System administrator";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Perpetua", 12.25F);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(123, 271);
+            this.label12.Location = new System.Drawing.Point(56, 259);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 20);
+            this.label12.Size = new System.Drawing.Size(30, 20);
             this.label12.TabIndex = 13;
-            this.label12.Text = "Hi";
+            this.label12.Text = "Hi,";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Perpetua", 12.25F);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(18, 312);
+            this.label13.Location = new System.Drawing.Point(70, 280);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(144, 20);
+            this.label13.Size = new System.Drawing.Size(143, 20);
             this.label13.TabIndex = 15;
-            this.label13.Text = "You are logged in as a";
+            this.label13.Text = "You are logged in ";
             // 
             // lblUserLogedIn
             // 
             this.lblUserLogedIn.AutoSize = true;
-            this.lblUserLogedIn.Font = new System.Drawing.Font("Perpetua", 10.25F);
+            this.lblUserLogedIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.lblUserLogedIn.ForeColor = System.Drawing.Color.White;
-            this.lblUserLogedIn.Location = new System.Drawing.Point(90, 294);
+            this.lblUserLogedIn.Location = new System.Drawing.Point(84, 259);
             this.lblUserLogedIn.Name = "lblUserLogedIn";
-            this.lblUserLogedIn.Size = new System.Drawing.Size(92, 16);
+            this.lblUserLogedIn.Size = new System.Drawing.Size(129, 20);
             this.lblUserLogedIn.TabIndex = 14;
             this.lblUserLogedIn.Text = "Matimu Ngoveni";
             // 
@@ -1059,6 +1061,17 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(114, 302);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 20);
+            this.label14.TabIndex = 17;
+            this.label14.Text = " as a";
+            // 
             // CrawlerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1192,6 +1205,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblUserLogedIn;
+        private System.Windows.Forms.Label label14;
     }
 }
 
