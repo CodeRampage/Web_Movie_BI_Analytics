@@ -35,7 +35,7 @@ namespace Web_Movie_BI_Analytics
 
             string last = "";
 
-            //label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
+            label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last) + " " + last;
             //oracleDataProcessor.insertSysUser("Matimu","Matimu","Ngoveni","passit");            
         }
 
