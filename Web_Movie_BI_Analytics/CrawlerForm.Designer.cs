@@ -99,6 +99,7 @@
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.btnCrawler = new System.Windows.Forms.Button();
+
             this.pnlDashboardComponents = new System.Windows.Forms.Panel();
             this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -130,6 +131,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -153,6 +155,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.pnlSystemManagement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LoginContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackDoor)).BeginInit();
@@ -886,6 +891,197 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // pnlSystemManagement
+            // 
+            this.pnlSystemManagement.BackColor = System.Drawing.Color.GhostWhite;
+            this.pnlSystemManagement.Controls.Add(this.btnCommitData);
+            this.pnlSystemManagement.Controls.Add(this.label10);
+            this.pnlSystemManagement.Controls.Add(this.label9);
+            this.pnlSystemManagement.Controls.Add(this.label8);
+            this.pnlSystemManagement.Controls.Add(this.label7);
+            this.pnlSystemManagement.Controls.Add(this.label5);
+            this.pnlSystemManagement.Controls.Add(this.DropTypeOfUser);
+//            this.pnlSystemManagement.Controls.Add(this.btnDeleteSystemUser);
+            this.pnlSystemManagement.Controls.Add(this.txtSystemUserConfirmPass);
+            this.pnlSystemManagement.Controls.Add(this.txtSystemUserPassword);
+            this.pnlSystemManagement.Controls.Add(this.txtSystemuserLastName);
+            this.pnlSystemManagement.Controls.Add(this.txtSystemUserFirstName);
+            this.pnlSystemManagement.Controls.Add(this.dropUserToDeleteOrEdit);
+            this.pnlSystemManagement.Controls.Add(this.panel2);
+            this.pnlSystemManagement.Location = new System.Drawing.Point(295, 93);
+            this.pnlSystemManagement.Name = "pnlSystemManagement";
+            this.pnlSystemManagement.Size = new System.Drawing.Size(689, 568);
+            this.pnlSystemManagement.TabIndex = 4;
+            this.pnlSystemManagement.Visible = false;
+            // 
+            // btnCommitData
+            // 
+            this.btnCommitData.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.database__1_;
+            this.btnCommitData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCommitData.Location = new System.Drawing.Point(455, 464);
+            this.btnCommitData.Name = "btnCommitData";
+            this.btnCommitData.Size = new System.Drawing.Size(42, 42);
+            this.btnCommitData.TabIndex = 13;
+            this.btnCommitData.TabStop = false;
+            this.btnCommitData.MouseLeave += new System.EventHandler(this.btnCommitData_MouseLeave);
+            this.btnCommitData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCommitData_MouseMove);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(156, 417);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Type of user";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(242, 386);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Confirm password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(277, 357);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Password";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(97, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Last name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(98, 293);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "First name";
+            // 
+            // DropTypeOfUser
+            // 
+            this.DropTypeOfUser.FormattingEnabled = true;
+            this.DropTypeOfUser.Location = new System.Drawing.Point(228, 414);
+            this.DropTypeOfUser.Name = "DropTypeOfUser";
+            this.DropTypeOfUser.Size = new System.Drawing.Size(315, 21);
+            this.DropTypeOfUser.TabIndex = 7;
+
+            // txtSystemUserConfirmPass
+            // 
+            this.txtSystemUserConfirmPass.Location = new System.Drawing.Point(338, 383);
+            this.txtSystemUserConfirmPass.Name = "txtSystemUserConfirmPass";
+            this.txtSystemUserConfirmPass.Size = new System.Drawing.Size(205, 20);
+            this.txtSystemUserConfirmPass.TabIndex = 5;
+            // 
+            // txtSystemUserPassword
+            // 
+            this.txtSystemUserPassword.Location = new System.Drawing.Point(338, 354);
+            this.txtSystemUserPassword.Name = "txtSystemUserPassword";
+            this.txtSystemUserPassword.Size = new System.Drawing.Size(205, 20);
+            this.txtSystemUserPassword.TabIndex = 4;
+            // 
+            // txtSystemuserLastName
+            // 
+            this.txtSystemuserLastName.Location = new System.Drawing.Point(159, 321);
+            this.txtSystemuserLastName.Name = "txtSystemuserLastName";
+            this.txtSystemuserLastName.Size = new System.Drawing.Size(384, 20);
+            this.txtSystemuserLastName.TabIndex = 3;
+            // 
+            // txtSystemUserFirstName
+            // 
+            this.txtSystemUserFirstName.Location = new System.Drawing.Point(159, 290);
+            this.txtSystemUserFirstName.Name = "txtSystemUserFirstName";
+            this.txtSystemUserFirstName.Size = new System.Drawing.Size(384, 20);
+            this.txtSystemUserFirstName.TabIndex = 2;
+            // 
+            // dropUserToDeleteOrEdit
+            // 
+            this.dropUserToDeleteOrEdit.FormattingEnabled = true;
+            this.dropUserToDeleteOrEdit.Location = new System.Drawing.Point(229, 168);
+            this.dropUserToDeleteOrEdit.Name = "dropUserToDeleteOrEdit";
+            this.dropUserToDeleteOrEdit.Size = new System.Drawing.Size(223, 21);
+            this.dropUserToDeleteOrEdit.TabIndex = 1;
+            this.dropUserToDeleteOrEdit.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(124)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.rdbEditUser);
+            this.panel2.Controls.Add(this.rdbRemoveUser);
+            this.panel2.Controls.Add(this.rdbAddUser);
+            this.panel2.Location = new System.Drawing.Point(252, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 56);
+            this.panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(46, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "System users";
+            // 
+            // rdbEditUser
+            // 
+            this.rdbEditUser.AutoSize = true;
+            this.rdbEditUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
+            this.rdbEditUser.ForeColor = System.Drawing.Color.White;
+            this.rdbEditUser.Location = new System.Drawing.Point(64, 12);
+            this.rdbEditUser.Name = "rdbEditUser";
+            this.rdbEditUser.Size = new System.Drawing.Size(46, 20);
+            this.rdbEditUser.TabIndex = 2;
+            this.rdbEditUser.Text = "Edit";
+            this.rdbEditUser.UseVisualStyleBackColor = true;
+            this.rdbEditUser.CheckedChanged += new System.EventHandler(this.rdbEditUser_CheckedChanged);
+            // 
+            // rdbRemoveUser
+            // 
+            this.rdbRemoveUser.AutoSize = true;
+            this.rdbRemoveUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
+            this.rdbRemoveUser.ForeColor = System.Drawing.Color.White;
+            this.rdbRemoveUser.Location = new System.Drawing.Point(113, 12);
+            this.rdbRemoveUser.Name = "rdbRemoveUser";
+            this.rdbRemoveUser.Size = new System.Drawing.Size(71, 20);
+            this.rdbRemoveUser.TabIndex = 1;
+            this.rdbRemoveUser.Text = "Remove ";
+            this.rdbRemoveUser.UseVisualStyleBackColor = true;
+            this.rdbRemoveUser.CheckedChanged += new System.EventHandler(this.rdbRemoveUser_CheckedChanged);
+            // 
+            // rdbAddUser
+            // 
+            this.rdbAddUser.AutoSize = true;
+            this.rdbAddUser.Checked = true;
+            this.rdbAddUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
+            this.rdbAddUser.ForeColor = System.Drawing.Color.White;
+            this.rdbAddUser.Location = new System.Drawing.Point(14, 12);
+            this.rdbAddUser.Name = "rdbAddUser";
+            this.rdbAddUser.Size = new System.Drawing.Size(46, 20);
+            this.rdbAddUser.TabIndex = 0;
+            this.rdbAddUser.TabStop = true;
+            this.rdbAddUser.Text = "Add";
+            this.rdbAddUser.UseVisualStyleBackColor = true;
+            this.rdbAddUser.CheckedChanged += new System.EventHandler(this.rdbAddUser_CheckedChanged);
+            // 
+
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.exit__1_;
@@ -1166,6 +1362,16 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(548, 380);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Scrape";
+            this.button2.UseVisualStyleBackColor = true;
+
+            // 
             // CrawlerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1209,6 +1415,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.pnlSystemManagement.ResumeLayout(false);
+            this.pnlSystemManagement.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.LoginContainer.ResumeLayout(false);
             this.LoginContainer.PerformLayout();
@@ -1304,6 +1515,7 @@
         private System.Windows.Forms.Button btnCrawler;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox btnScraper;
         private System.Windows.Forms.Label lblScrape;
         private System.Windows.Forms.Label lblSignOut;
