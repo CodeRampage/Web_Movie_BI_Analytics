@@ -57,6 +57,7 @@
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnlDashMenu = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblTypeOfUserLoggedIn = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -123,7 +124,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.btnCrawler = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -145,6 +148,7 @@
             this.pnlSystemManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).BeginInit();
             this.panel2.SuspendLayout();
+            this.pnlCrawler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LoginContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BackDoor)).BeginInit();
@@ -215,7 +219,6 @@
             // 
             // LoginPanel
             // 
-            this.LoginPanel.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.preview;
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LoginPanel.Controls.Add(this.pnlDashboard);
             this.LoginPanel.Controls.Add(this.pictureBox2);
@@ -230,13 +233,13 @@
             // 
             this.pnlDashboard.Controls.Add(this.pictureBox4);
             this.pnlDashboard.Controls.Add(this.pnlDashMenu);
-            this.pnlDashboard.Controls.Add(this.pnlDashboardComponents);
-            this.pnlDashboard.Controls.Add(this.pnlSystemManagement);
             this.pnlDashboard.Controls.Add(this.pnlCrawler);
             this.pnlDashboard.Controls.Add(this.pnlDashHomeDesign);
+            this.pnlDashboard.Controls.Add(this.pnlDashboardComponents);
+            this.pnlDashboard.Controls.Add(this.pnlSystemManagement);
             this.pnlDashboard.Location = new System.Drawing.Point(0, 0);
             this.pnlDashboard.Name = "pnlDashboard";
-            this.pnlDashboard.Size = new System.Drawing.Size(984, 661);
+            this.pnlDashboard.Size = new System.Drawing.Size(984, 658);
             this.pnlDashboard.TabIndex = 12;
             this.pnlDashboard.Visible = false;
             this.pnlDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDashboard_Paint);
@@ -275,6 +278,17 @@
             this.pnlDashMenu.Name = "pnlDashMenu";
             this.pnlDashMenu.Size = new System.Drawing.Size(295, 661);
             this.pnlDashMenu.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(114, 302);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 20);
+            this.label14.TabIndex = 17;
+            this.label14.Text = " as a";
             // 
             // lblTypeOfUserLoggedIn
             // 
@@ -440,7 +454,7 @@
             this.pnlDashboardComponents.Controls.Add(this.chart1);
             this.pnlDashboardComponents.Location = new System.Drawing.Point(295, 93);
             this.pnlDashboardComponents.Name = "pnlDashboardComponents";
-            this.pnlDashboardComponents.Size = new System.Drawing.Size(689, 568);
+            this.pnlDashboardComponents.Size = new System.Drawing.Size(689, 565);
             this.pnlDashboardComponents.TabIndex = 2;
             this.pnlDashboardComponents.Visible = false;
             // 
@@ -766,6 +780,9 @@
             // pnlCrawler
             // 
             this.pnlCrawler.BackColor = System.Drawing.Color.GhostWhite;
+            this.pnlCrawler.Controls.Add(this.listBox4);
+            this.pnlCrawler.Controls.Add(this.listBox3);
+            this.pnlCrawler.Controls.Add(this.btnCrawler);
             this.pnlCrawler.Location = new System.Drawing.Point(295, 93);
             this.pnlCrawler.Name = "pnlCrawler";
             this.pnlCrawler.Size = new System.Drawing.Size(689, 568);
@@ -1061,16 +1078,30 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // label14
+            // btnCrawler
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(114, 302);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 20);
-            this.label14.TabIndex = 17;
-            this.label14.Text = " as a";
+            this.btnCrawler.Location = new System.Drawing.Point(297, 380);
+            this.btnCrawler.Name = "btnCrawler";
+            this.btnCrawler.Size = new System.Drawing.Size(75, 23);
+            this.btnCrawler.TabIndex = 2;
+            this.btnCrawler.Text = "crawl";
+            this.btnCrawler.UseVisualStyleBackColor = true;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(41, 45);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(229, 251);
+            this.listBox3.TabIndex = 3;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(394, 45);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(229, 251);
+            this.listBox4.TabIndex = 4;
             // 
             // CrawlerForm
             // 
@@ -1112,6 +1143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlCrawler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.LoginContainer.ResumeLayout(false);
             this.LoginContainer.PerformLayout();
@@ -1206,6 +1238,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblUserLogedIn;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnCrawler;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 
