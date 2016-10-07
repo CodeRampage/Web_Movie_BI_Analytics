@@ -237,11 +237,33 @@ namespace Web_Movie_BI_Analytics
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Textbox design along with drop downs
+            lblDeleteUser.Visible = false;
             this.txtBoxPassword.AutoSize = false;
             this.txtBoxPassword.Size = new System.Drawing.Size(233, 30);
 
             this.txtBoxUsername.AutoSize = false;
             this.txtBoxUsername.Size = new System.Drawing.Size(233, 30);
+
+            this.txtSystemUserFirstName.AutoSize = false;
+            this.txtSystemUserFirstName.Size = new System.Drawing.Size(384, 30);
+
+            this.txtSystemuserLastName.AutoSize = false;
+            this.txtSystemuserLastName.Size = new System.Drawing.Size(384, 30);
+
+            this.txtSystemUserPassword.AutoSize = false;
+            this.txtSystemUserPassword.Size = new System.Drawing.Size(205, 30);
+
+            this.txtSystemUserConfirmPass.AutoSize = false;
+            this.txtSystemUserConfirmPass.Size = new System.Drawing.Size(205, 30);
+
+            this.DropTypeOfUser.AutoSize = false;
+            this.DropTypeOfUser.Size = new System.Drawing.Size(315, 30);
+
+            this.dropUserToDeleteOrEdit.AutoSize = false;
+            this.dropUserToDeleteOrEdit.Size = new System.Drawing.Size(223, 30);
+
+
 
             txtBoxUsername.Text = "Username";
             txtBoxPassword.Text = "Password";    
@@ -585,14 +607,18 @@ namespace Web_Movie_BI_Analytics
 
         private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
         {
-            pictureBox4.Size = new Size(71, 73);
+            pictureBox4.Size = new Size(71, 57);
             pictureBox4.Location = new Point(909, 10);
+
+            lblSignOut.Visible = true;            
         }
 
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox4.Size = new Size(61, 63);
+            pictureBox4.Size = new Size(61, 47);
             pictureBox4.Location = new Point(911, 12);
+
+            lblSignOut.Visible = false;
         }
 
         private void lblSystemManagement_MouseMove(object sender, MouseEventArgs e)
@@ -634,7 +660,8 @@ namespace Web_Movie_BI_Analytics
 
             pnlCrawler.Visible = false;
             pnlDashboardComponents.Visible = false;
-            pnlDashHomeDesign.Visible = false;
+            btnScraper.Visible = false;
+            lblScrape.Visible = false;
             pnlSystemManagement.Visible = true;
         }
 
@@ -658,7 +685,8 @@ namespace Web_Movie_BI_Analytics
 
             pnlCrawler.Visible = false;
             pnlDashboardComponents.Visible = true;
-            pnlDashHomeDesign.Visible = false;
+            btnScraper.Visible = true;
+            lblScrape.Visible = true;
             pnlSystemManagement.Visible = false;
         }
 
@@ -682,7 +710,8 @@ namespace Web_Movie_BI_Analytics
 
             pnlCrawler.Visible = true;
             pnlDashboardComponents.Visible = false;
-            pnlDashHomeDesign.Visible = false;
+            btnScraper.Visible = false;
+            lblScrape.Visible = false;
             pnlSystemManagement.Visible = false;
         }
 
@@ -715,7 +744,8 @@ namespace Web_Movie_BI_Analytics
         private void rdbAddUser_CheckedChanged(object sender, EventArgs e)
         {
             dropUserToDeleteOrEdit.Visible = false;
-            btnDeleteSystemUser.Visible = false;
+            lblDeleteUser.Visible = false;
+            panel4.Visible = false;
 
             txtSystemUserFirstName.Visible = true;
             txtSystemuserLastName.Visible = true;
@@ -730,13 +760,14 @@ namespace Web_Movie_BI_Analytics
             label10.Visible = true;
 
             btnCommitData.Visible = true;
-            label11.Visible = true;
+            lblCommitData.Visible = true;
         }
 
         private void rdbEditUser_CheckedChanged(object sender, EventArgs e)
         {
             dropUserToDeleteOrEdit.Visible = true;
-            btnDeleteSystemUser.Visible = false;
+            lblDeleteUser.Visible = false;
+            panel4.Visible = false;
 
             txtSystemUserFirstName.Visible = true;
             txtSystemuserLastName.Visible = true;
@@ -751,13 +782,14 @@ namespace Web_Movie_BI_Analytics
             label10.Visible = true;
 
             btnCommitData.Visible = true;
-            label11.Visible = true;
+            lblCommitData.Visible = true;
         }
 
         private void rdbRemoveUser_CheckedChanged(object sender, EventArgs e)
         {
             dropUserToDeleteOrEdit.Visible = true;
-            btnDeleteSystemUser.Visible = true;
+            lblDeleteUser.Visible = true;
+            panel4.Visible = true;
 
             txtSystemUserFirstName.Visible = false;
             txtSystemuserLastName.Visible = false;
@@ -772,19 +804,56 @@ namespace Web_Movie_BI_Analytics
             label10.Visible = false;
 
             btnCommitData.Visible = false;
-            label11.Visible = false;
+            lblCommitData.Visible = false;
         }
 
         private void btnCommitData_MouseMove(object sender, MouseEventArgs e)
         {
             btnCommitData.Size = new Size(52, 52);
-            btnCommitData.Location = new Point(453, 462);
+            btnCommitData.Location = new Point(459, 481);
+
+            lblCommitData.Visible = true;
         }
 
         private void btnCommitData_MouseLeave(object sender, EventArgs e)
         {
             btnCommitData.Size = new Size(42, 42);
-            btnCommitData.Location = new Point(455, 464);
+            btnCommitData.Location = new Point(461, 483);
+
+            lblCommitData.Visible = false;
+        }
+
+        private void btnScraper_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnScraper.Size = new Size(53, 57);
+            btnScraper.Location = new Point(613, 10);
+        }
+
+        private void btnScraper_MouseLeave(object sender, EventArgs e)
+        {
+            btnScraper.Size = new Size(43, 47);
+            btnScraper.Location = new Point(615, 12);
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            panel4.Size = new Size(53, 52);
+            panel4.Location = new Point(312, 200);
+
+            lblDeleteUser.Visible = true;
+        }
+
+        private void panel4_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.Size = new Size(43, 42);
+            panel4.Location = new Point(314, 202);
+
+            lblDeleteUser.Visible = false;
+        }
+
+        private void btnCommitData_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
