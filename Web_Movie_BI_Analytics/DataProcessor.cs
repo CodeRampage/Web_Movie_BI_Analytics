@@ -76,11 +76,11 @@ namespace Web_Movie_BI_Analytics
                             genre = doc.Genre;
                             releaseStatus = doc.ReleaseStatus;
 
-                            //pump.movieInsert(doc.Name,doc.Year, releaseStatus , doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
+                            pump.movieInsert(doc.Name,doc.Year, releaseStatus , doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
 
                             foreach (var star in cast)
                             {
-                                //await Task.Factory.StartNew(() => pump.castInsert(star.Name,star.Character));
+                                await Task.Factory.StartNew(() => pump.castInsert(star.Name,star.Character,star.Gender,star.BirthPlace, star.Credits));
                             }
                         }
                     }
@@ -180,7 +180,7 @@ namespace Web_Movie_BI_Analytics
                 }
             }
 
-            public void castInsert(string name,string character)
+            public void castInsert(string name,string character, string gender,string birthPlace, string credits)
             {
                 name = name.Trim();
                 string [] names = name.Split(' ');
@@ -227,6 +227,12 @@ namespace Web_Movie_BI_Analytics
                 if (!(last.Length > 1))
                     last = "Unknown";
 
+                gender = gender.Trim();
+                birthPlace = birthPlace.Trim();
+                credits = credits.Trim();
+
+                Console.WriteLine(gender);
+
                 if(first=="Unknown" && last == "Unknown")
                 {
                     ;
@@ -241,6 +247,9 @@ namespace Web_Movie_BI_Analytics
                         cmd.Parameters.Add("fname", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = first;
                         cmd.Parameters.Add("lname", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = last;
                         cmd.Parameters.Add("movie_character", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = character;
+                        cmd.Parameters.Add("birthPlace", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = birthPlace;
+                        cmd.Parameters.Add("actor_creds", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = credits;
+                        cmd.Parameters.Add("actor_gender", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = gender;
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }

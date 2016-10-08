@@ -180,17 +180,17 @@ namespace Web_Movie_BI_Analytics
                     var castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
 
 
-                    zipCast = genderNumerable.Zip(birthNumerable, (first, second) => new ObjectClasses.Person() { Gender = first, BirthDay = second }).Zip(
-                        creditsNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthDay = first.BirthDay, Credits = second }).Zip(
-                        castNameNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthDay = first.BirthDay, Credits = first.Credits, Name = second }).Zip(
-                        castCharacterNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthDay = first.BirthDay, Credits = first.Credits, Name = first.Name, Character = second });
+                    zipCast = genderNumerable.Zip(birthNumerable, (first, second) => new ObjectClasses.Person() { Gender = first, BirthPlace = second }).Zip(
+                        creditsNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthPlace = first.BirthPlace, Credits = second }).Zip(
+                        castNameNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthPlace = first.BirthPlace, Credits = first.Credits, Name = second }).Zip(
+                        castCharacterNumerable, (first, second) => new ObjectClasses.Person() { Gender = first.Gender, BirthPlace = first.BirthPlace, Credits = first.Credits, Name = first.Name, Character = second });
 
                     foreach (var person in zipCast)
                     {
                         string name = person.Name;
                         string character = person.Character;
 
-                        listBox4.Items.Add(name + " " + character+" "+person.BirthDay+" "+person.Gender);
+                        listBox4.Items.Add(name + " " + character+" "+person.BirthPlace + " "+person.Gender+" "+person.Credits);
                     }
                 }
                 catch
@@ -928,6 +928,11 @@ namespace Web_Movie_BI_Analytics
         }
 
         private async void btnCrawler_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void btnCrawler_Click_2(object sender, EventArgs e)
         {
             int pageNum = 0;
 

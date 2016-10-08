@@ -32,11 +32,9 @@ namespace Web_Movie_BI_Analytics
         public class Person
         {
             public string Name { get; set; }
-            public string Department { get; set; }
-            public string Role { get; set; }
             public string Character { get; set; }
             public string Gender { get; set; }
-            public string BirthDay { get; set; }
+            public string BirthPlace { get; set; }
             public string Credits { get; set; }
         }
     }
