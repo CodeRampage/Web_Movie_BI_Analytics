@@ -63,6 +63,16 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9d451263f4315196e263376533edd051 {
+            get {
+                object obj = ResourceManager.GetObject("9d451263f4315196e263376533edd051", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_User_Male_104 {
             get {
                 object obj = ResourceManager.GetObject("Add User Male-104", resourceCulture);
@@ -153,6 +163,26 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap disney_pictures_22 {
+            get {
+                object obj = ResourceManager.GetObject("disney-pictures-22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DreamWorks_Studios_logo_svg {
+            get {
+                object obj = ResourceManager.GetObject("DreamWorks_Studios_logo.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit__1_ {
             get {
                 object obj = ResourceManager.GetObject("exit (1)", resourceCulture);
@@ -163,9 +193,29 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit__2_ {
+            get {
+                object obj = ResourceManager.GetObject("exit (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filmroll {
             get {
                 object obj = ResourceManager.GetObject("filmroll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GW256H191 {
+            get {
+                object obj = ResourceManager.GetObject("GW256H191", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +263,29 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NewLineCinema_Logo_300x184 {
+            get {
+                object obj = ResourceManager.GetObject("NewLineCinema-Logo-300x184", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap online_international_educational_service_symbol {
             get {
                 object obj = ResourceManager.GetObject("online-international-educational-service-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opened_filled_door__1_ {
+            get {
+                object obj = ResourceManager.GetObject("opened-filled-door (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +333,39 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Universal_Studios_svg {
+            get {
+                object obj = ResourceManager.GetObject("Universal_Studios.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user__1_ {
             get {
                 object obj = ResourceManager.GetObject("user (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_e_and_eve_wallpaper_hd_otherxxxa {
+            get {
+                object obj = ResourceManager.GetObject("wall_e_and_eve_wallpaper_hd-otherxxxa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warner_Bros__logo__1984_ {
+            get {
+                object obj = ResourceManager.GetObject("Warner_Bros._logo_(1984)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

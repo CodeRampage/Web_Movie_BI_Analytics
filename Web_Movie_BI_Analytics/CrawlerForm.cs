@@ -326,13 +326,13 @@ namespace Web_Movie_BI_Analytics
         private void btnAddNewUser_MouseMove(object sender, MouseEventArgs e)
         {
             btnAddNewUser.Size = new Size(41, 42);
-            btnAddNewUser.Location = new Point(250, 440);
+            btnAddNewUser.Location = new Point(256, 460);
         }
 
         private void btnAddNewUser_MouseLeave(object sender, EventArgs e)
         {
             btnAddNewUser.Size = new Size(31, 32);
-            btnAddNewUser.Location = new Point(252, 442);
+            btnAddNewUser.Location = new Point(258, 462);
         }
 
         private void txtBoxUsername_MouseMove(object sender, MouseEventArgs e)
@@ -574,13 +574,17 @@ namespace Web_Movie_BI_Analytics
         private void pictureBox2_MouseMove_1(object sender, MouseEventArgs e)
         {
             pictureBox2.Size = new Size(70, 63);
-            pictureBox2.Location = new Point(898, 589);
+            pictureBox2.Location = new Point(895, 513);
+
+            lblSlyzaTsotsi.Visible = true;
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Size = new Size(60, 53);
-            pictureBox2.Location = new Point(900, 591);
+            pictureBox2.Location = new Point(897, 515);
+
+            lblSlyzaTsotsi.Visible = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -697,6 +701,7 @@ namespace Web_Movie_BI_Analytics
             DashboardCounterId = 0;
             CrawlerCounterId = 0;
 
+            lblScrape.Visible = false;
             picBoxDashComponents.Size = new Size(44, 42);
             picBoxDashComponents.Location = new Point(48, 471);
             label4.Font = new Font(label4.Font.FontFamily, 14);
@@ -721,6 +726,7 @@ namespace Web_Movie_BI_Analytics
             picBoxDashComponents.Size = new Size(54, 52);
             picBoxDashComponents.Location = new Point(48, 471);
             label4.Font = new Font(label4.Font.FontFamily, 16);
+            lblScrape.Visible = false;
 
             DashboardCounterId++;
             CrawlerCounterId = 0;
@@ -732,8 +738,7 @@ namespace Web_Movie_BI_Analytics
 
             pnlCrawler.Visible = false;
             pnlDashboardComponents.Visible = true;
-            btnScraper.Visible = true;
-            lblScrape.Visible = true;
+            btnScraper.Visible = true;            
             pnlSystemManagement.Visible = false;
         }
 
@@ -746,6 +751,7 @@ namespace Web_Movie_BI_Analytics
             picBoxDashComponents.Size = new Size(44, 42);
             picBoxDashComponents.Location = new Point(48, 471);
             label4.Font = new Font(label4.Font.FontFamily, 14);
+            lblScrape.Visible = false;
 
             picBoxCrawler.Size = new Size(54, 52);
             picBoxCrawler.Location = new Point(48, 399);
@@ -794,6 +800,9 @@ namespace Web_Movie_BI_Analytics
             lblDeleteUser.Visible = false;
             panel4.Visible = false;
 
+            lblDeleteUser.Visible = false;
+            lblCommitData.Visible = false;
+
             txtSystemUserFirstName.Visible = true;
             txtSystemuserLastName.Visible = true;
             txtSystemUserPassword.Visible = true;
@@ -806,8 +815,7 @@ namespace Web_Movie_BI_Analytics
             label9.Visible = true;
             label10.Visible = true;
 
-            btnCommitData.Visible = true;
-            lblCommitData.Visible = true;
+            btnCommitData.Visible = true;            
         }
 
         private void rdbEditUser_CheckedChanged(object sender, EventArgs e)
@@ -816,6 +824,9 @@ namespace Web_Movie_BI_Analytics
             lblDeleteUser.Visible = false;
             panel4.Visible = false;
 
+            lblDeleteUser.Visible = false;
+            lblCommitData.Visible = false;
+
             txtSystemUserFirstName.Visible = true;
             txtSystemuserLastName.Visible = true;
             txtSystemUserPassword.Visible = true;
@@ -828,8 +839,7 @@ namespace Web_Movie_BI_Analytics
             label9.Visible = true;
             label10.Visible = true;
 
-            btnCommitData.Visible = true;
-            lblCommitData.Visible = true;
+            btnCommitData.Visible = true;            
         }
 
         private void rdbRemoveUser_CheckedChanged(object sender, EventArgs e)
@@ -837,6 +847,9 @@ namespace Web_Movie_BI_Analytics
             dropUserToDeleteOrEdit.Visible = true;
             lblDeleteUser.Visible = true;
             panel4.Visible = true;
+
+            lblDeleteUser.Visible = false;
+            lblCommitData.Visible = false;
 
             txtSystemUserFirstName.Visible = false;
             txtSystemuserLastName.Visible = false;
@@ -857,7 +870,7 @@ namespace Web_Movie_BI_Analytics
         private void btnCommitData_MouseMove(object sender, MouseEventArgs e)
         {
             btnCommitData.Size = new Size(52, 52);
-            btnCommitData.Location = new Point(459, 481);
+            btnCommitData.Location = new Point(462, 481);
 
             lblCommitData.Visible = true;
         }
@@ -865,7 +878,7 @@ namespace Web_Movie_BI_Analytics
         private void btnCommitData_MouseLeave(object sender, EventArgs e)
         {
             btnCommitData.Size = new Size(42, 42);
-            btnCommitData.Location = new Point(461, 483);
+            btnCommitData.Location = new Point(464, 483);
 
             lblCommitData.Visible = false;
         }
@@ -874,12 +887,16 @@ namespace Web_Movie_BI_Analytics
         {
             btnScraper.Size = new Size(53, 57);
             btnScraper.Location = new Point(613, 10);
+
+            lblScrape.Visible = true;
         }
 
         private void btnScraper_MouseLeave(object sender, EventArgs e)
         {
             btnScraper.Size = new Size(43, 47);
             btnScraper.Location = new Point(615, 12);
+
+            lblScrape.Visible = false;
         }
 
         private void panel4_MouseMove(object sender, MouseEventArgs e)
