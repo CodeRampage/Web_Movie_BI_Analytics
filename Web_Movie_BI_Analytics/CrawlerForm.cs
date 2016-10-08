@@ -198,27 +198,6 @@ namespace Web_Movie_BI_Analytics
                     ;
                 }
 
-                //IEnumerable<ObjectClasses.Person> castZip = null;
-                //try
-                //{
-                //     var castNameNumerable = castNameNode.Select(node => node.InnerText);
-                //     var castCharacterNumerable = castCharacterNameNode.Select(node => node.InnerText);
-
-                //    castZip = castNameNumerable.Zip(castCharacterNumerable, (name, character) => new ObjectClasses.Person() { Name = name, Character = character });
-
-                //    foreach (var person in castZip)
-                //    {
-                //        string name = person.Name;
-                //        string character = person.Character;
-
-                //        listBox4.Items.Add(name + " " + character);
-                //    }
-                //}
-                //catch
-                //{
-                //    ;
-                //}
-
                 ObjectClasses.MovieData data = new ObjectClasses.MovieData
                 {
                     Link = movieLink,
@@ -237,7 +216,7 @@ namespace Web_Movie_BI_Analytics
                     Cast = zipCast
                 };
 
-                //mongoDataProcessor.mongoInsert(data);
+                mongoDataProcessor.mongoInsert(data);
             }
             catch
             {
