@@ -205,6 +205,9 @@
   <ItemGroup>
     <None Include="Resources\Warner_Bros._logo_%281984%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crawling-baby-silhouette.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

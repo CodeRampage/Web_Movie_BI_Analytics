@@ -571,7 +571,7 @@ namespace Web_Movie_BI_Analytics
         private void pictureBox2_MouseMove_1(object sender, MouseEventArgs e)
         {
             pictureBox2.Size = new Size(70, 63);
-            pictureBox2.Location = new Point(895, 513);
+            pictureBox2.Location = new Point(891, 506);
 
             lblSlyzaTsotsi.Visible = true;
         }
@@ -579,7 +579,7 @@ namespace Web_Movie_BI_Analytics
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Size = new Size(60, 53);
-            pictureBox2.Location = new Point(897, 515);
+            pictureBox2.Location = new Point(893, 508);
 
             lblSlyzaTsotsi.Visible = false;
         }
