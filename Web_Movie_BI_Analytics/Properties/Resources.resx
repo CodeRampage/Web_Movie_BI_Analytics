@@ -166,9 +166,6 @@
   <data name="Add User Male-104" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add User Male-104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zakes.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="database (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +177,9 @@
   </data>
   <data name="Natural User Interface 2-104" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Natural User Interface 2-104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuration-cogwheel-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\configuration-cogwheel-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filmroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filmroll.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,13 +205,16 @@
   <data name="masks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\masks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="configuration-cogwheel-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\configuration-cogwheel-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Warner_Bros._logo_(1984)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warner_Bros._logo_(1984).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakes.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="team" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Warner_Bros._logo_(1984)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Warner_Bros._logo_(1984).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="crawling-baby-silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crawling-baby-silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

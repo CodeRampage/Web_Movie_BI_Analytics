@@ -133,6 +133,16 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crawling_baby_silhouette {
+            get {
+                object obj = ResourceManager.GetObject("crawling-baby-silhouette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database {
             get {
                 object obj = ResourceManager.GetObject("database", resourceCulture);
