@@ -59,8 +59,6 @@
             this.pnlSystemManagement = new System.Windows.Forms.Panel();
             this.lblCommitData = new System.Windows.Forms.Label();
             this.lblDeleteUser = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCommitData = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -78,23 +76,15 @@
             this.rdbRemoveUser = new System.Windows.Forms.RadioButton();
             this.rdbAddUser = new System.Windows.Forms.RadioButton();
             this.lblScrape = new System.Windows.Forms.Label();
-            this.btnScraper = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnlDashMenu = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.lblTypeOfUserLoggedIn = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblUserLogedIn = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblSystemManagement = new System.Windows.Forms.Label();
-            this.picBoxSystemManagement = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.picBoxCrawler = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.picBoxDashComponents = new System.Windows.Forms.PictureBox();
             this.pnlCrawler = new System.Windows.Forms.Panel();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
@@ -107,45 +97,54 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LoginContainer = new System.Windows.Forms.Panel();
-            this.BackDoor = new System.Windows.Forms.PictureBox();
-            this.btnAddNewUser = new System.Windows.Forms.PictureBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.lblInfo2 = new System.Windows.Forms.Label();
-            this.PicBoxHandSign = new System.Windows.Forms.PictureBox();
             this.linkLblForgotPass = new System.Windows.Forms.LinkLabel();
             this.lblinfo1 = new System.Windows.Forms.Label();
-            this.PicBoxUserIcon = new System.Windows.Forms.PictureBox();
             this.txtBoxUsername = new System.Windows.Forms.TextBox();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.pnlSignUp = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblSlyzaTsotsi = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.btnScraper = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.picBoxSystemManagement = new System.Windows.Forms.PictureBox();
+            this.picBoxCrawler = new System.Windows.Forms.PictureBox();
+            this.picBoxDashComponents = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCommitData = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BackDoor = new System.Windows.Forms.PictureBox();
+            this.btnAddNewUser = new System.Windows.Forms.PictureBox();
+            this.PicBoxHandSign = new System.Windows.Forms.PictureBox();
+            this.PicBoxUserIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             this.pnlSystemManagement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnScraper)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlDashMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSystemManagement)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCrawler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxDashComponents)).BeginInit();
             this.pnlCrawler.SuspendLayout();
             this.pnlDashboardComponents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
@@ -154,13 +153,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LoginContainer.SuspendLayout();
+            this.pnlSignUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnScraper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxSystemManagement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCrawler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxDashComponents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackDoor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxHandSign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxUserIcon)).BeginInit();
-            this.pnlSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -226,6 +241,14 @@
             // 
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LoginPanel.Controls.Add(this.pnlDashboard);
+            this.LoginPanel.Controls.Add(this.pictureBox11);
+            this.LoginPanel.Controls.Add(this.pictureBox15);
+            this.LoginPanel.Controls.Add(this.pictureBox14);
+            this.LoginPanel.Controls.Add(this.pictureBox13);
+            this.LoginPanel.Controls.Add(this.lblSlyzaTsotsi);
+            this.LoginPanel.Controls.Add(this.pictureBox9);
+            this.LoginPanel.Controls.Add(this.pictureBox8);
+            this.LoginPanel.Controls.Add(this.pictureBox6);
             this.LoginPanel.Controls.Add(this.pictureBox2);
             this.LoginPanel.Controls.Add(this.LoginContainer);
             this.LoginPanel.Controls.Add(this.pnlSignUp);
@@ -241,12 +264,12 @@
             this.pnlDashboard.Controls.Add(this.btnScraper);
             this.pnlDashboard.Controls.Add(this.pictureBox4);
             this.pnlDashboard.Controls.Add(this.pnlDashMenu);
-            this.pnlDashboard.Controls.Add(this.pnlCrawler);
             this.pnlDashboard.Controls.Add(this.pnlDashboardComponents);
             this.pnlDashboard.Controls.Add(this.pnlSystemManagement);
+            this.pnlDashboard.Controls.Add(this.pnlCrawler);
             this.pnlDashboard.Location = new System.Drawing.Point(0, 0);
             this.pnlDashboard.Name = "pnlDashboard";
-            this.pnlDashboard.Size = new System.Drawing.Size(984, 658);
+            this.pnlDashboard.Size = new System.Drawing.Size(984, 661);
             this.pnlDashboard.TabIndex = 12;
             this.pnlDashboard.Visible = false;
             this.pnlDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDashboard_Paint);
@@ -257,7 +280,7 @@
             this.lblSignOut.BackColor = System.Drawing.Color.Transparent;
             this.lblSignOut.Font = new System.Drawing.Font("Perpetua", 10.25F);
             this.lblSignOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(124)))), ((int)(((byte)(0)))));
-            this.lblSignOut.Location = new System.Drawing.Point(922, 67);
+            this.lblSignOut.Location = new System.Drawing.Point(923, 67);
             this.lblSignOut.Name = "lblSignOut";
             this.lblSignOut.Size = new System.Drawing.Size(48, 16);
             this.lblSignOut.TabIndex = 16;
@@ -296,7 +319,7 @@
             this.lblCommitData.BackColor = System.Drawing.Color.Transparent;
             this.lblCommitData.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCommitData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(124)))), ((int)(((byte)(0)))));
-            this.lblCommitData.Location = new System.Drawing.Point(430, 528);
+            this.lblCommitData.Location = new System.Drawing.Point(430, 532);
             this.lblCommitData.Name = "lblCommitData";
             this.lblCommitData.Size = new System.Drawing.Size(102, 22);
             this.lblCommitData.TabIndex = 14;
@@ -309,42 +332,17 @@
             this.lblDeleteUser.BackColor = System.Drawing.Color.Transparent;
             this.lblDeleteUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
             this.lblDeleteUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(124)))), ((int)(((byte)(0)))));
-            this.lblDeleteUser.Location = new System.Drawing.Point(315, 250);
+            this.lblDeleteUser.Location = new System.Drawing.Point(315, 252);
             this.lblDeleteUser.Name = "lblDeleteUser";
             this.lblDeleteUser.Size = new System.Drawing.Size(42, 16);
             this.lblDeleteUser.TabIndex = 17;
             this.lblDeleteUser.Text = "Delete";
             this.lblDeleteUser.Visible = false;
             // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.computing_cloud;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(314, 202);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(43, 42);
-            this.panel4.TabIndex = 15;
-            this.panel4.Visible = false;
-            this.panel4.MouseLeave += new System.EventHandler(this.panel4_MouseLeave);
-            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
-            // 
-            // btnCommitData
-            // 
-            this.btnCommitData.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.database__1_;
-            this.btnCommitData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCommitData.Location = new System.Drawing.Point(455, 464);
-            this.btnCommitData.Name = "btnCommitData";
-            this.btnCommitData.Size = new System.Drawing.Size(42, 42);
-            this.btnCommitData.TabIndex = 13;
-            this.btnCommitData.TabStop = false;
-            this.btnCommitData.Click += new System.EventHandler(this.btnCommitData_Click);
-            this.btnCommitData.MouseLeave += new System.EventHandler(this.btnCommitData_MouseLeave);
-            this.btnCommitData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCommitData_MouseMove);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(156, 417);
+            this.label10.Location = new System.Drawing.Point(156, 451);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 13);
             this.label10.TabIndex = 12;
@@ -353,7 +351,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(242, 386);
+            this.label9.Location = new System.Drawing.Point(245, 417);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 13);
             this.label9.TabIndex = 11;
@@ -362,7 +360,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(277, 357);
+            this.label8.Location = new System.Drawing.Point(282, 382);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 10;
@@ -371,7 +369,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(97, 324);
+            this.label7.Location = new System.Drawing.Point(98, 347);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 9;
@@ -380,7 +378,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(98, 293);
+            this.label5.Location = new System.Drawing.Point(98, 311);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 8;
@@ -390,7 +388,7 @@
             // 
             this.DropTypeOfUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.DropTypeOfUser.FormattingEnabled = true;
-            this.DropTypeOfUser.Location = new System.Drawing.Point(228, 414);
+            this.DropTypeOfUser.Location = new System.Drawing.Point(228, 443);
             this.DropTypeOfUser.Name = "DropTypeOfUser";
             this.DropTypeOfUser.Size = new System.Drawing.Size(315, 28);
             this.DropTypeOfUser.TabIndex = 7;
@@ -398,7 +396,7 @@
             // txtSystemUserConfirmPass
             // 
             this.txtSystemUserConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtSystemUserConfirmPass.Location = new System.Drawing.Point(338, 383);
+            this.txtSystemUserConfirmPass.Location = new System.Drawing.Point(338, 409);
             this.txtSystemUserConfirmPass.Name = "txtSystemUserConfirmPass";
             this.txtSystemUserConfirmPass.Size = new System.Drawing.Size(205, 26);
             this.txtSystemUserConfirmPass.TabIndex = 5;
@@ -407,7 +405,7 @@
             // txtSystemUserPassword
             // 
             this.txtSystemUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtSystemUserPassword.Location = new System.Drawing.Point(338, 354);
+            this.txtSystemUserPassword.Location = new System.Drawing.Point(338, 374);
             this.txtSystemUserPassword.Name = "txtSystemUserPassword";
             this.txtSystemUserPassword.Size = new System.Drawing.Size(205, 26);
             this.txtSystemUserPassword.TabIndex = 4;
@@ -416,7 +414,7 @@
             // txtSystemuserLastName
             // 
             this.txtSystemuserLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtSystemuserLastName.Location = new System.Drawing.Point(159, 321);
+            this.txtSystemuserLastName.Location = new System.Drawing.Point(159, 339);
             this.txtSystemuserLastName.Name = "txtSystemuserLastName";
             this.txtSystemuserLastName.Size = new System.Drawing.Size(384, 26);
             this.txtSystemuserLastName.TabIndex = 3;
@@ -424,7 +422,7 @@
             // txtSystemUserFirstName
             // 
             this.txtSystemUserFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSystemUserFirstName.Location = new System.Drawing.Point(159, 290);
+            this.txtSystemUserFirstName.Location = new System.Drawing.Point(159, 304);
             this.txtSystemUserFirstName.Name = "txtSystemUserFirstName";
             this.txtSystemUserFirstName.Size = new System.Drawing.Size(384, 26);
             this.txtSystemUserFirstName.TabIndex = 2;
@@ -446,9 +444,9 @@
             this.panel2.Controls.Add(this.rdbEditUser);
             this.panel2.Controls.Add(this.rdbRemoveUser);
             this.panel2.Controls.Add(this.rdbAddUser);
-            this.panel2.Location = new System.Drawing.Point(252, 23);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 56);
+            this.panel2.Size = new System.Drawing.Size(689, 56);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -456,7 +454,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Perpetua", 12.25F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 36);
+            this.label2.Location = new System.Drawing.Point(293, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 3;
@@ -467,7 +465,7 @@
             this.rdbEditUser.AutoSize = true;
             this.rdbEditUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
             this.rdbEditUser.ForeColor = System.Drawing.Color.White;
-            this.rdbEditUser.Location = new System.Drawing.Point(64, 12);
+            this.rdbEditUser.Location = new System.Drawing.Point(311, 12);
             this.rdbEditUser.Name = "rdbEditUser";
             this.rdbEditUser.Size = new System.Drawing.Size(46, 20);
             this.rdbEditUser.TabIndex = 2;
@@ -480,7 +478,7 @@
             this.rdbRemoveUser.AutoSize = true;
             this.rdbRemoveUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
             this.rdbRemoveUser.ForeColor = System.Drawing.Color.White;
-            this.rdbRemoveUser.Location = new System.Drawing.Point(113, 12);
+            this.rdbRemoveUser.Location = new System.Drawing.Point(360, 12);
             this.rdbRemoveUser.Name = "rdbRemoveUser";
             this.rdbRemoveUser.Size = new System.Drawing.Size(71, 20);
             this.rdbRemoveUser.TabIndex = 1;
@@ -494,7 +492,7 @@
             this.rdbAddUser.Checked = true;
             this.rdbAddUser.Font = new System.Drawing.Font("Perpetua", 10.25F);
             this.rdbAddUser.ForeColor = System.Drawing.Color.White;
-            this.rdbAddUser.Location = new System.Drawing.Point(14, 12);
+            this.rdbAddUser.Location = new System.Drawing.Point(261, 12);
             this.rdbAddUser.Name = "rdbAddUser";
             this.rdbAddUser.Size = new System.Drawing.Size(46, 20);
             this.rdbAddUser.TabIndex = 0;
@@ -515,32 +513,6 @@
             this.lblScrape.TabIndex = 15;
             this.lblScrape.Text = "Scrape data";
             this.lblScrape.Visible = false;
-            // 
-            // btnScraper
-            // 
-            this.btnScraper.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.database__2_;
-            this.btnScraper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnScraper.Location = new System.Drawing.Point(615, 12);
-            this.btnScraper.Name = "btnScraper";
-            this.btnScraper.Size = new System.Drawing.Size(43, 47);
-            this.btnScraper.TabIndex = 5;
-            this.btnScraper.TabStop = false;
-            this.btnScraper.Visible = false;
-            this.btnScraper.MouseLeave += new System.EventHandler(this.btnScraper_MouseLeave);
-            this.btnScraper.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnScraper_MouseMove);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.back_left_arrow_outline_symbol_in_black_circular_button;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(911, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(61, 47);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
             // pnlDashMenu
             // 
@@ -619,34 +591,6 @@
             this.lblUserLogedIn.TabIndex = 14;
             this.lblUserLogedIn.Text = "Matimu Ngoveni";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.White;
-            this.pictureBox7.Location = new System.Drawing.Point(22, 246);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(230, 1);
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.zakes;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 45);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(305, 220);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.Location = new System.Drawing.Point(48, 358);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(180, 1);
-            this.pictureBox10.TabIndex = 10;
-            this.pictureBox10.TabStop = false;
-            // 
             // lblSystemManagement
             // 
             this.lblSystemManagement.AutoSize = true;
@@ -663,16 +607,6 @@
             this.lblSystemManagement.MouseLeave += new System.EventHandler(this.lblSystemManagement_MouseLeave);
             this.lblSystemManagement.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblSystemManagement_MouseMove);
             // 
-            // picBoxSystemManagement
-            // 
-            this.picBoxSystemManagement.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.management;
-            this.picBoxSystemManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxSystemManagement.Location = new System.Drawing.Point(48, 560);
-            this.picBoxSystemManagement.Name = "picBoxSystemManagement";
-            this.picBoxSystemManagement.Size = new System.Drawing.Size(44, 42);
-            this.picBoxSystemManagement.TabIndex = 8;
-            this.picBoxSystemManagement.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -687,16 +621,6 @@
             this.label6.Click += new System.EventHandler(this.label6_Click);
             this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
             this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label6_MouseMove);
-            // 
-            // picBoxCrawler
-            // 
-            this.picBoxCrawler.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.spider;
-            this.picBoxCrawler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxCrawler.Location = new System.Drawing.Point(48, 413);
-            this.picBoxCrawler.Name = "picBoxCrawler";
-            this.picBoxCrawler.Size = new System.Drawing.Size(44, 42);
-            this.picBoxCrawler.TabIndex = 6;
-            this.picBoxCrawler.TabStop = false;
             // 
             // label4
             // 
@@ -713,16 +637,6 @@
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label4_MouseMove);
             // 
-            // picBoxDashComponents
-            // 
-            this.picBoxDashComponents.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.cascade_visualization_option_interface_button;
-            this.picBoxDashComponents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxDashComponents.Location = new System.Drawing.Point(48, 485);
-            this.picBoxDashComponents.Name = "picBoxDashComponents";
-            this.picBoxDashComponents.Size = new System.Drawing.Size(44, 42);
-            this.picBoxDashComponents.TabIndex = 2;
-            this.picBoxDashComponents.TabStop = false;
-            // 
             // pnlCrawler
             // 
             this.pnlCrawler.BackColor = System.Drawing.Color.GhostWhite;
@@ -738,15 +652,15 @@
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(255, 45);
+            this.listBox4.Location = new System.Drawing.Point(394, 45);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(414, 251);
+            this.listBox4.Size = new System.Drawing.Size(229, 251);
             this.listBox4.TabIndex = 4;
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(15, 45);
+            this.listBox3.Location = new System.Drawing.Point(41, 45);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(229, 251);
             this.listBox3.TabIndex = 3;
@@ -759,7 +673,6 @@
             this.btnCrawler.TabIndex = 2;
             this.btnCrawler.Text = "crawl";
             this.btnCrawler.UseVisualStyleBackColor = true;
-            this.btnCrawler.Click += new System.EventHandler(this.btnCrawler_Click_2);
             // 
             // pnlDashboardComponents
             // 
@@ -777,7 +690,7 @@
             this.pnlDashboardComponents.Controls.Add(this.chart1);
             this.pnlDashboardComponents.Location = new System.Drawing.Point(295, 93);
             this.pnlDashboardComponents.Name = "pnlDashboardComponents";
-            this.pnlDashboardComponents.Size = new System.Drawing.Size(689, 565);
+            this.pnlDashboardComponents.Size = new System.Drawing.Size(689, 568);
             this.pnlDashboardComponents.TabIndex = 2;
             this.pnlDashboardComponents.Visible = false;
             // 
@@ -888,23 +801,10 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.exit__1_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(900, 591);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 53);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove_1);
-            // 
             // LoginContainer
             // 
-            this.LoginContainer.Controls.Add(this.BackDoor);
             this.LoginContainer.Controls.Add(this.btnAddNewUser);
+            this.LoginContainer.Controls.Add(this.BackDoor);
             this.LoginContainer.Controls.Add(this.btnSignIn);
             this.LoginContainer.Controls.Add(this.lblInfo2);
             this.LoginContainer.Controls.Add(this.PicBoxHandSign);
@@ -913,40 +813,16 @@
             this.LoginContainer.Controls.Add(this.PicBoxUserIcon);
             this.LoginContainer.Controls.Add(this.txtBoxUsername);
             this.LoginContainer.Controls.Add(this.txtBoxPassword);
-            this.LoginContainer.Location = new System.Drawing.Point(310, 50);
+            this.LoginContainer.Location = new System.Drawing.Point(298, 3);
             this.LoginContainer.Name = "LoginContainer";
-            this.LoginContainer.Size = new System.Drawing.Size(351, 510);
+            this.LoginContainer.Size = new System.Drawing.Size(351, 605);
             this.LoginContainer.TabIndex = 9;
-            // 
-            // BackDoor
-            // 
-            this.BackDoor.BackColor = System.Drawing.Color.Transparent;
-            this.BackDoor.Location = new System.Drawing.Point(167, 173);
-            this.BackDoor.Name = "BackDoor";
-            this.BackDoor.Size = new System.Drawing.Size(37, 24);
-            this.BackDoor.TabIndex = 10;
-            this.BackDoor.TabStop = false;
-            this.BackDoor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackDoor_MouseDown);
-            this.BackDoor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BackDoor_MouseUp);
-            // 
-            // btnAddNewUser
-            // 
-            this.btnAddNewUser.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Add_User_Male_104;
-            this.btnAddNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddNewUser.Location = new System.Drawing.Point(252, 442);
-            this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Size = new System.Drawing.Size(31, 32);
-            this.btnAddNewUser.TabIndex = 9;
-            this.btnAddNewUser.TabStop = false;
-            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
-            this.btnAddNewUser.MouseLeave += new System.EventHandler(this.btnAddNewUser_MouseLeave);
-            this.btnAddNewUser.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnAddNewUser_MouseMove);
             // 
             // btnSignIn
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.Location = new System.Drawing.Point(125, 290);
+            this.btnSignIn.Location = new System.Drawing.Point(145, 339);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(88, 27);
             this.btnSignIn.TabIndex = 3;
@@ -959,28 +835,18 @@
             this.lblInfo2.AutoSize = true;
             this.lblInfo2.BackColor = System.Drawing.Color.Transparent;
             this.lblInfo2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInfo2.Location = new System.Drawing.Point(211, 382);
+            this.lblInfo2.Location = new System.Drawing.Point(231, 440);
             this.lblInfo2.Name = "lblInfo2";
             this.lblInfo2.Size = new System.Drawing.Size(58, 13);
             this.lblInfo2.TabIndex = 7;
             this.lblInfo2.Text = "password?";
-            // 
-            // PicBoxHandSign
-            // 
-            this.PicBoxHandSign.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Natural_User_Interface_2_104;
-            this.PicBoxHandSign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PicBoxHandSign.Location = new System.Drawing.Point(145, 323);
-            this.PicBoxHandSign.Name = "PicBoxHandSign";
-            this.PicBoxHandSign.Size = new System.Drawing.Size(59, 56);
-            this.PicBoxHandSign.TabIndex = 4;
-            this.PicBoxHandSign.TabStop = false;
             // 
             // linkLblForgotPass
             // 
             this.linkLblForgotPass.AutoSize = true;
             this.linkLblForgotPass.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLblForgotPass.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linkLblForgotPass.Location = new System.Drawing.Point(164, 382);
+            this.linkLblForgotPass.Location = new System.Drawing.Point(184, 440);
             this.linkLblForgotPass.Name = "linkLblForgotPass";
             this.linkLblForgotPass.Size = new System.Drawing.Size(49, 13);
             this.linkLblForgotPass.TabIndex = 6;
@@ -993,26 +859,16 @@
             this.lblinfo1.AutoSize = true;
             this.lblinfo1.BackColor = System.Drawing.Color.Transparent;
             this.lblinfo1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblinfo1.Location = new System.Drawing.Point(65, 382);
+            this.lblinfo1.Location = new System.Drawing.Point(85, 440);
             this.lblinfo1.Name = "lblinfo1";
             this.lblinfo1.Size = new System.Drawing.Size(104, 13);
             this.lblinfo1.TabIndex = 5;
             this.lblinfo1.Text = "Sign in, or have you ";
             // 
-            // PicBoxUserIcon
-            // 
-            this.PicBoxUserIcon.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.user__1_;
-            this.PicBoxUserIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PicBoxUserIcon.Location = new System.Drawing.Point(50, 43);
-            this.PicBoxUserIcon.Name = "PicBoxUserIcon";
-            this.PicBoxUserIcon.Size = new System.Drawing.Size(233, 172);
-            this.PicBoxUserIcon.TabIndex = 8;
-            this.PicBoxUserIcon.TabStop = false;
-            // 
             // txtBoxUsername
             // 
             this.txtBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxUsername.Location = new System.Drawing.Point(50, 221);
+            this.txtBoxUsername.Location = new System.Drawing.Point(65, 256);
             this.txtBoxUsername.Name = "txtBoxUsername";
             this.txtBoxUsername.Size = new System.Drawing.Size(233, 26);
             this.txtBoxUsername.TabIndex = 1;
@@ -1027,7 +883,7 @@
             // txtBoxPassword
             // 
             this.txtBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPassword.Location = new System.Drawing.Point(50, 256);
+            this.txtBoxPassword.Location = new System.Drawing.Point(65, 298);
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.Size = new System.Drawing.Size(233, 26);
             this.txtBoxPassword.TabIndex = 2;
@@ -1050,21 +906,11 @@
             this.pnlSignUp.Controls.Add(this.label3);
             this.pnlSignUp.Controls.Add(this.txtUserName);
             this.pnlSignUp.Controls.Add(this.txtPassword);
-            this.pnlSignUp.Location = new System.Drawing.Point(301, 42);
+            this.pnlSignUp.Location = new System.Drawing.Point(288, 31);
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(369, 528);
             this.pnlSignUp.TabIndex = 10;
             this.pnlSignUp.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.team;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(77, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(233, 172);
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
             // 
             // txtConfirmPass
             // 
@@ -1110,16 +956,6 @@
             this.btnSignUp.Text = "Sign up";
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Natural_User_Interface_2_104;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(174, 419);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 56);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -1177,6 +1013,273 @@
             this.button2.Text = "Scrape";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // lblSlyzaTsotsi
+            // 
+            this.lblSlyzaTsotsi.AutoSize = true;
+            this.lblSlyzaTsotsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlyzaTsotsi.Location = new System.Drawing.Point(888, 564);
+            this.lblSlyzaTsotsi.Name = "lblSlyzaTsotsi";
+            this.lblSlyzaTsotsi.Size = new System.Drawing.Size(84, 16);
+            this.lblSlyzaTsotsi.TabIndex = 18;
+            this.lblSlyzaTsotsi.Text = "Slyza tsotsi...";
+            this.lblSlyzaTsotsi.Visible = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Warner_Bros__logo__1984_;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox15.Location = new System.Drawing.Point(881, 598);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(91, 56);
+            this.pictureBox15.TabIndex = 22;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.NewLineCinema_Logo_300x184;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox14.Location = new System.Drawing.Point(752, 598);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(91, 56);
+            this.pictureBox14.TabIndex = 21;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources._9d451263f4315196e263376533edd051;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox13.Location = new System.Drawing.Point(631, 598);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(91, 56);
+            this.pictureBox13.TabIndex = 20;
+            this.pictureBox13.TabStop = false;
+            // 
+            // btnScraper
+            // 
+            this.btnScraper.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.database__2_;
+            this.btnScraper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnScraper.Location = new System.Drawing.Point(615, 12);
+            this.btnScraper.Name = "btnScraper";
+            this.btnScraper.Size = new System.Drawing.Size(43, 47);
+            this.btnScraper.TabIndex = 5;
+            this.btnScraper.TabStop = false;
+            this.btnScraper.Visible = false;
+            this.btnScraper.MouseLeave += new System.EventHandler(this.btnScraper_MouseLeave);
+            this.btnScraper.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnScraper_MouseMove);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.back_left_arrow_outline_symbol_in_black_circular_button;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(911, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(61, 47);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.Location = new System.Drawing.Point(22, 246);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(230, 1);
+            this.pictureBox7.TabIndex = 12;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.zakes;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(-1, 27);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(305, 220);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.Location = new System.Drawing.Point(48, 358);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(180, 1);
+            this.pictureBox10.TabIndex = 10;
+            this.pictureBox10.TabStop = false;
+            // 
+            // picBoxSystemManagement
+            // 
+            this.picBoxSystemManagement.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.management;
+            this.picBoxSystemManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxSystemManagement.Location = new System.Drawing.Point(48, 560);
+            this.picBoxSystemManagement.Name = "picBoxSystemManagement";
+            this.picBoxSystemManagement.Size = new System.Drawing.Size(44, 42);
+            this.picBoxSystemManagement.TabIndex = 8;
+            this.picBoxSystemManagement.TabStop = false;
+            // 
+            // picBoxCrawler
+            // 
+            this.picBoxCrawler.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.spider;
+            this.picBoxCrawler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxCrawler.Location = new System.Drawing.Point(48, 413);
+            this.picBoxCrawler.Name = "picBoxCrawler";
+            this.picBoxCrawler.Size = new System.Drawing.Size(44, 42);
+            this.picBoxCrawler.TabIndex = 6;
+            this.picBoxCrawler.TabStop = false;
+            // 
+            // picBoxDashComponents
+            // 
+            this.picBoxDashComponents.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.cascade_visualization_option_interface_button;
+            this.picBoxDashComponents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxDashComponents.Location = new System.Drawing.Point(48, 485);
+            this.picBoxDashComponents.Name = "picBoxDashComponents";
+            this.picBoxDashComponents.Size = new System.Drawing.Size(44, 42);
+            this.picBoxDashComponents.TabIndex = 2;
+            this.picBoxDashComponents.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.computing_cloud;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Location = new System.Drawing.Point(314, 202);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(43, 42);
+            this.panel4.TabIndex = 15;
+            this.panel4.Visible = false;
+            this.panel4.MouseLeave += new System.EventHandler(this.panel4_MouseLeave);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            // 
+            // btnCommitData
+            // 
+            this.btnCommitData.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.database__1_;
+            this.btnCommitData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCommitData.Location = new System.Drawing.Point(464, 483);
+            this.btnCommitData.Name = "btnCommitData";
+            this.btnCommitData.Size = new System.Drawing.Size(42, 42);
+            this.btnCommitData.TabIndex = 13;
+            this.btnCommitData.TabStop = false;
+            this.btnCommitData.Click += new System.EventHandler(this.btnCommitData_Click);
+            this.btnCommitData.MouseLeave += new System.EventHandler(this.btnCommitData_MouseLeave);
+            this.btnCommitData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCommitData_MouseMove);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.zakes;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox11.Location = new System.Drawing.Point(393, 530);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(194, 148);
+            this.pictureBox11.TabIndex = 16;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.GW256H191;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Location = new System.Drawing.Point(257, 598);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(91, 56);
+            this.pictureBox9.TabIndex = 15;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Universal_Studios_svg;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(138, 598);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(85, 56);
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.disney_pictures_22;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(12, 598);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(85, 56);
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.exit__2_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(893, 508);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove_1);
+            // 
+            // BackDoor
+            // 
+            this.BackDoor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
+            this.BackDoor.Location = new System.Drawing.Point(174, 197);
+            this.BackDoor.Name = "BackDoor";
+            this.BackDoor.Size = new System.Drawing.Size(37, 24);
+            this.BackDoor.TabIndex = 10;
+            this.BackDoor.TabStop = false;
+            this.BackDoor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BackDoor_MouseDown);
+            this.BackDoor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BackDoor_MouseUp);
+            // 
+            // btnAddNewUser
+            // 
+            this.btnAddNewUser.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Add_User_Male_104;
+            this.btnAddNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddNewUser.Location = new System.Drawing.Point(258, 462);
+            this.btnAddNewUser.Name = "btnAddNewUser";
+            this.btnAddNewUser.Size = new System.Drawing.Size(31, 32);
+            this.btnAddNewUser.TabIndex = 9;
+            this.btnAddNewUser.TabStop = false;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
+            this.btnAddNewUser.MouseLeave += new System.EventHandler(this.btnAddNewUser_MouseLeave);
+            this.btnAddNewUser.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnAddNewUser_MouseMove);
+            // 
+            // PicBoxHandSign
+            // 
+            this.PicBoxHandSign.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Natural_User_Interface_2_104;
+            this.PicBoxHandSign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PicBoxHandSign.Location = new System.Drawing.Point(162, 372);
+            this.PicBoxHandSign.Name = "PicBoxHandSign";
+            this.PicBoxHandSign.Size = new System.Drawing.Size(59, 56);
+            this.PicBoxHandSign.TabIndex = 4;
+            this.PicBoxHandSign.TabStop = false;
+            // 
+            // PicBoxUserIcon
+            // 
+            this.PicBoxUserIcon.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.user__1_;
+            this.PicBoxUserIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PicBoxUserIcon.Location = new System.Drawing.Point(65, 66);
+            this.PicBoxUserIcon.Name = "PicBoxUserIcon";
+            this.PicBoxUserIcon.Size = new System.Drawing.Size(233, 172);
+            this.PicBoxUserIcon.TabIndex = 8;
+            this.PicBoxUserIcon.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.team;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(77, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(233, 172);
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.Natural_User_Interface_2_104;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(174, 419);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 56);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // CrawlerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1195,23 +1298,15 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.LoginPanel.ResumeLayout(false);
+            this.LoginPanel.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
             this.pnlDashboard.PerformLayout();
             this.pnlSystemManagement.ResumeLayout(false);
             this.pnlSystemManagement.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnScraper)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlDashMenu.ResumeLayout(false);
             this.pnlDashMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSystemManagement)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCrawler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxDashComponents)).EndInit();
             this.pnlCrawler.ResumeLayout(false);
             this.pnlDashboardComponents.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
@@ -1220,15 +1315,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.LoginContainer.ResumeLayout(false);
             this.LoginContainer.PerformLayout();
+            this.pnlSignUp.ResumeLayout(false);
+            this.pnlSignUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnScraper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxSystemManagement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCrawler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxDashComponents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCommitData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackDoor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddNewUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxHandSign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxUserIcon)).EndInit();
-            this.pnlSignUp.ResumeLayout(false);
-            this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1321,6 +1432,14 @@
         private System.Windows.Forms.Label lblSignOut;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblDeleteUser;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label lblSlyzaTsotsi;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox15;
     }
 }
 

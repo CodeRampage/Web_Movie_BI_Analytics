@@ -118,70 +118,100 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cascade-visualization-option-interface-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cascade-visualization-option-interface-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add User Male-104" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add User Male-104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="management" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="configuration-cogwheel-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\configuration-cogwheel-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spider (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spider (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spider" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="computing-cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computing-cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zakes.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="back-left-arrow-outline-symbol-in-black-circular-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back-left-arrow-outline-symbol-in-black-circular-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Natural User Interface 2-104" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Natural User Interface 2-104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="team" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cloud-computing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud-computing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="database (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="online-international-educational-service-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\online-international-educational-service-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="masks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\masks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="male-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filmroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filmroll.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NewLineCinema-Logo-300x184" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewLineCinema-Logo-300x184.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="database (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="back-left-arrow-outline-symbol-in-black-circular-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back-left-arrow-outline-symbol-in-black-circular-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disney-pictures-22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disney-pictures-22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opened-filled-door (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opened-filled-door (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spider (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spider (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Universal_Studios.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Universal_Studios.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cascade-visualization-option-interface-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cascade-visualization-option-interface-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add User Male-104" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add User Male-104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakes.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9d451263f4315196e263376533edd051" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9d451263f4315196e263376533edd051.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GW256H191" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GW256H191.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Natural User Interface 2-104" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Natural User Interface 2-104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filmroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filmroll.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="online-international-educational-service-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\online-international-educational-service-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DreamWorks_Studios_logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DreamWorks_Studios_logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloud-computing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud-computing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computing-cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computing-cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="male-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_e_and_eve_wallpaper_hd-otherxxxa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall_e_and_eve_wallpaper_hd-otherxxxa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="masks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\masks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuration-cogwheel-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\configuration-cogwheel-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="team" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warner_Bros._logo_(1984)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warner_Bros._logo_(1984).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

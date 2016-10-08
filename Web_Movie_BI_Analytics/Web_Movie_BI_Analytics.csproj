@@ -175,6 +175,36 @@
   <ItemGroup>
     <None Include="Resources\user %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened-filled-door %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disney-pictures-22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Universal_Studios.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GW256H191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall_e_and_eve_wallpaper_hd-otherxxxa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DreamWorks_Studios_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9d451263f4315196e263376533edd051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewLineCinema-Logo-300x184.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warner_Bros._logo_%281984%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
