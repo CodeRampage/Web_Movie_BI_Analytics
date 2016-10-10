@@ -50,8 +50,7 @@ namespace Web_Movie_BI_Analytics
 
             string last = "";
 
-            //label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last,ref user_type) + " " + last;
-            //oracleDataProcessor.insertSysUser("Matimu","Matimu","Ngoveni","passit");            
+            //label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last,ref user_type) + " " + last;          
         }
 
         protected async Task<List<ObjectClasses.MovieData>> crawl(int finalPage)
@@ -311,6 +310,40 @@ namespace Web_Movie_BI_Analytics
         private void btnExit_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnCommitData_Click(object sender, EventArgs e)
+        {
+            string fname = txtSystemUserFirstName.Text;
+            string lname = txtSystemuserLastName.Text;
+            string pass = txtSystemUserPassword.Text;
+            string confirmPass = txtSystemUserConfirmPass.Text;
+            string user_type = DropTypeOfUser.SelectedText;
+
+            if (rdbAddUser.Checked)
+            {
+                if(pass==confirmPass)
+                    oracleDataProcessor.insertSysUser(fname, lname, pass, confirmPass, user_type);
+                else
+                {
+                    MessageBox.Show(this, "Error: 201: Passwords do not match", "Unmatching Passwords Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (rdbEditUser.Checked)
+            {
+
+
+               // sessionUser.updateUser();
+            }
+            else if (rdbRemoveUser.Checked)
+            {
+                
+            }
+        }
+
+        private void btnScraper_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -594,7 +627,16 @@ namespace Web_Movie_BI_Analytics
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            string name = txtFirstName.Text;
+            string last = txtLastName.Text;
+            string pass = txtPassword.Text;
+            string repeatPass = txtConfirmPass.Text;
+            string username = txtBoxUsername.Text;
 
+            if (pass == repeatPass)
+                oracleDataProcessor.insertSysUser(username, name, last, "General System User", pass);
+            else
+                MessageBox.Show("Error 201: Passwords do not match!", "Unmatching passwords", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
@@ -870,8 +912,19 @@ namespace Web_Movie_BI_Analytics
             label9.Visible = true;
             label10.Visible = true;
 
-            btnCommitData.Visible = true;            
+            addUsers();
         }
+
+
+        public void addUsers()
+        {
+            List<ObjectClasses.System_user> user = sessionUser.retrieveAllUsers();
+
+            dropUserToDeleteOrEdit.DisplayMember = "NAMES";
+            dropUserToDeleteOrEdit.ValueMember = "USERN";
+            dropUserToDeleteOrEdit.DataSource = user;
+        }
+
 
         private void rdbRemoveUser_CheckedChanged(object sender, EventArgs e)
         {
@@ -896,6 +949,8 @@ namespace Web_Movie_BI_Analytics
 
             btnCommitData.Visible = false;
             lblCommitData.Visible = false;
+
+            addUsers();
         }
 
         private void btnCommitData_MouseMove(object sender, MouseEventArgs e)
@@ -944,16 +999,6 @@ namespace Web_Movie_BI_Analytics
             panel4.Location = new Point(314, 202);
 
             lblDeleteUser.Visible = false;
-        }
-
-        private void btnCommitData_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnScraper_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
