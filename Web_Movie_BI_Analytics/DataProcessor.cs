@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Oracle.DataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
 using System.Text.RegularExpressions;
 
 namespace Web_Movie_BI_Analytics
@@ -14,6 +14,11 @@ namespace Web_Movie_BI_Analytics
     {
         protected static OracleConnection conn;
         protected static OracleCommand cmd;
+
+        protected static IMongoCollection<ObjectClasses.MovieData> movieCollection;
+
+        protected static IMongoClient client = new MongoClient("mongodb://intelTechs:umdeniwedb@196.253.61.51:27017/itrw321DB");
+        protected static IMongoDatabase db = client.GetDatabase("itrw321D");
 
         public static void openConnection()
         {
@@ -24,10 +29,6 @@ namespace Web_Movie_BI_Analytics
         //MongoData
         public class Mongo
         {
-            protected static IMongoCollection<ObjectClasses.MovieData> movieCollection;
-            protected static IMongoClient client = new MongoClient("mongodb://intelTechs:umdeniwedb@196.253.61.51:27017/itrw321DB");
-            protected static IMongoDatabase db = client.GetDatabase("itrw321D");
-
             DataPump pump = new DataPump();
 
             public void mongoInsert(ObjectClasses.MovieData data)
@@ -36,55 +37,11 @@ namespace Web_Movie_BI_Analytics
                 movieCollection.InsertOne(data);
             }
 
-            public void mongoResetCollections()
-            {
-
-            }
-
-            public async void retrieveMovies()
+            public async void mongoResetCollections()
             {
                 movieCollection = db.GetCollection<ObjectClasses.MovieData>("Movies");
-
-                string movieName = null;
-                string year = null;
-                string rating = null;
-                string overview = null;
-                string language = null;
-                string runtime = null;
-                string budget = null;
-                string revenue = null;
-                string genre = null;
-                string releaseStatus = null;
-
-                IEnumerable<ObjectClasses.Person> cast = null;
-
-                using (var cursor = await movieCollection.Find(new BsonDocument()).ToCursorAsync())
-                {
-                    while (await cursor.MoveNextAsync())
-                    {
-                        foreach (var doc in cursor.Current)
-                        {
-                            movieName = doc.Name;
-                            year = doc.Year;
-                            rating = doc.Overview;
-                            overview = doc.Overview;
-                            language = doc.Language;
-                            runtime = doc.Runtime;
-                            budget = doc.Budget;
-                            revenue = doc.Revenue;
-                            cast = doc.Cast;
-                            genre = doc.Genre;
-                            releaseStatus = doc.ReleaseStatus;
-
-                            pump.movieInsert(doc.Name,doc.Year, releaseStatus , doc.Rating,doc.Overview,doc.Release,doc.Budget,doc.Revenue,doc.HomePage,genre);
-
-                            foreach (var star in cast)
-                            {
-                                await Task.Factory.StartNew(() => pump.castInsert(star.Name,star.Character,star.Gender,star.BirthPlace, star.Credits));
-                            }
-                        }
-                    }
-                }
+                var filter = new BsonDocument();
+                var result = await movieCollection.DeleteManyAsync(filter);
             }
         }
 
@@ -108,6 +65,18 @@ namespace Web_Movie_BI_Analytics
                     cmd.Parameters.Add("user_last", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = lname;
                     cmd.Parameters.Add("user_pass", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = password;
                     cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+
+            public async void deleteMovies()
+            {
+                openConnection();
+                using (conn)
+                {
+                    cmd = new OracleCommand("DELETE_DATA", conn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    await Task.Factory.StartNew(() =>cmd.ExecuteNonQuery());
                     conn.Close();
                 }
             }
@@ -231,9 +200,13 @@ namespace Web_Movie_BI_Analytics
                 birthPlace = birthPlace.Trim();
                 credits = credits.Trim();
 
-                Console.WriteLine(gender);
+                if (gender == "-")
+                    gender = "Uknown";
 
-                if(first=="Unknown" && last == "Unknown")
+                if (birthPlace == "--")
+                    birthPlace = "Unknown";
+
+                if (first=="Unknown" && last == "Unknown")
                 {
                     ;
                 }
@@ -244,17 +217,64 @@ namespace Web_Movie_BI_Analytics
                     {
                         cmd = new OracleCommand("INSERT_CAST", conn);
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("fname", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = first;
-                        cmd.Parameters.Add("lname", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = last;
-                        cmd.Parameters.Add("movie_character", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = character;
-                        cmd.Parameters.Add("birthPlace", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = birthPlace;
-                        cmd.Parameters.Add("actor_creds", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = credits;
-                        cmd.Parameters.Add("actor_gender", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = gender;
+                        cmd.Parameters.Add("fname", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = first.Trim();
+                        cmd.Parameters.Add("lname", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = last.Trim();
+                        cmd.Parameters.Add("movie_character", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = character.Trim();
+                        cmd.Parameters.Add("birthPlace", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = birthPlace.Trim();
+                        cmd.Parameters.Add("actor_creds", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = credits.Trim();
+                        cmd.Parameters.Add("actor_gender", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = gender.Trim();
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }
                 }
             }
-        }
+
+            public async void retrieveMovies()
+            {
+                movieCollection = db.GetCollection<ObjectClasses.MovieData>("Movies");
+
+                string movieName = null;
+                string year = null;
+                string rating = null;
+                string overview = null;
+                string language = null;
+                string runtime = null;
+                string budget = null;
+                string revenue = null;
+                string genre = null;
+                string releaseStatus = null;
+
+                IEnumerable<ObjectClasses.Person> cast = null;
+
+                using (var cursor = await movieCollection.Find(new BsonDocument()).ToCursorAsync())
+                {
+                    while (await cursor.MoveNextAsync())
+                    {
+                        foreach (var doc in cursor.Current)
+                        {
+                            movieName = doc.Name;
+                            year = doc.Year;
+                            rating = doc.Overview;
+                            overview = doc.Overview;
+                            language = doc.Language;
+                            runtime = doc.Runtime;
+                            budget = doc.Budget;
+                            revenue = doc.Revenue;
+                            cast = doc.Cast;
+                            genre = doc.Genre;
+                            releaseStatus = doc.ReleaseStatus;
+
+                            movieInsert(doc.Name, doc.Year, releaseStatus, doc.Rating, doc.Overview, doc.Release, doc.Budget, doc.Revenue, doc.HomePage, genre);
+
+                            foreach (var star in cast)
+                            {
+                                await Task.Factory.StartNew(() => castInsert(star.Name, star.Character, star.Gender, star.BirthPlace, star.Credits));
+                            }
+                        }
+                    }
+                }
+            }
+            //End
+        }//End Class
     }
 }
