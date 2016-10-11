@@ -12,10 +12,7 @@ namespace Web_Movie_BI_Analytics
         public static OracleConnection conn;
         public static OracleCommand cmd;
 
-        public string USERNAME { get; set; }
-        public string FIRST { get; set; }
-        public string LAST { get; set; }
-        public string PASSWORD { get; set; }
+        List<ObjectClasses.System_user> user = new List<ObjectClasses.System_user>();
 
         public void openConnection()
         {
@@ -47,6 +44,51 @@ namespace Web_Movie_BI_Analytics
                 user_type = cmd.Parameters["user_t"].Value.ToString();
                 conn.Close();
                 return fname;
+            }
+        }
+
+        public List<ObjectClasses.System_user> retrieveAllUsers()
+        {
+            openConnection();
+            using (conn)
+            {
+                cmd = new OracleCommand("GET_SYSTE_USERS", conn);
+                cmd.CommandType = System.Data.CommandType.TableDirect;
+
+                OracleDataReader reader = cmd.ExecuteReader();
+                
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string name = reader.GetString(0);
+
+                        user.Add(new ObjectClasses.System_user { FIRST = reader.GetString(0), LAST = reader.GetString(1), USERN = reader.GetString(2), PASS = reader.GetString(3), USERT = reader.GetString(4), NAMES = reader.GetString(0)+" "+reader.GetString(1)});
+                    }
+                }
+
+                conn.Close();
+
+                return user;
+            }
+        }
+
+        public void updateUser(string username,string first, string last, string user_type,string pass)
+        {
+            openConnection();
+            using (conn)
+            {
+                cmd = new OracleCommand("UPDATE_USER", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Add("usern", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = username;
+                cmd.Parameters.Add("user_first", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = first;
+                cmd.Parameters.Add("user_last", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = last;
+                cmd.Parameters.Add("user_pass", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = pass;
+                cmd.Parameters.Add("user_t", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = user_type;
+                cmd.ExecuteNonQuery();
+
+                string fname = cmd.Parameters["user_f"].Value.ToString();
+                conn.Close();
             }
         }
     }

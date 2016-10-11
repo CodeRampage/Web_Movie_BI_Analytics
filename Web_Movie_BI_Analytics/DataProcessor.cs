@@ -53,7 +53,7 @@ namespace Web_Movie_BI_Analytics
                 conn.Close();
             }
 
-            public void insertSysUser(string username, string fname, string lname, string password)
+            public void insertSysUser(string username, string fname, string lname, string password, string user_type)
             {
                 openConnection();
                 using (conn)
@@ -64,6 +64,7 @@ namespace Web_Movie_BI_Analytics
                     cmd.Parameters.Add("user_first", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = fname;
                     cmd.Parameters.Add("user_last", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = lname;
                     cmd.Parameters.Add("user_pass", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = password;
+                    cmd.Parameters.Add("user_t", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = user_type;
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }

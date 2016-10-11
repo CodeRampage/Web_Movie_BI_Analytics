@@ -37,5 +37,15 @@ namespace Web_Movie_BI_Analytics
             public string BirthPlace { get; set; }
             public string Credits { get; set; }
         }
+
+        public class System_user
+        {
+            public string USERN { get; set; }
+            public string PASS { get; set; }
+            public string USERT { get; set; }
+            public string LAST { get; set; }
+            public string FIRST { get; set; }
+            public string NAMES { get; set; }
+        }
     }
 }
