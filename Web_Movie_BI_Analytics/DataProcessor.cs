@@ -17,11 +17,8 @@ namespace Web_Movie_BI_Analytics
 
         protected static IMongoCollection<ObjectClasses.MovieData> movieCollection;
 
-        //protected static IMongoClient client = new MongoClient("mongodb://intelTechs:umdeniwedb@196.253.61.51:27017/itrw321DB");
-        //protected static IMongoDatabase db = client.GetDatabase("itrw321D");
-
-        protected static IMongoClient client = new MongoClient("mongodb://105.184.215.78:47975/audioalbums");
-        protected static IMongoDatabase db = client.GetDatabase("audioalbums");
+        protected static IMongoClient client = new MongoClient("mongodb://intelTechs:umdeniwedb@196.253.61.51:27017/itrw321DB");
+        protected static IMongoDatabase db = client.GetDatabase("itrw321D");
 
         public static void openConnection()
         {
