@@ -11,8 +11,6 @@ using HtmlAgilityPack;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Windows.Forms.DataVisualization.Charting;
-using LiveCharts;
-using LiveCharts.Wpf;
 
 namespace Web_Movie_BI_Analytics
 {
@@ -48,7 +46,11 @@ namespace Web_Movie_BI_Analytics
             sessionUser = new LoginController();
             mongoDataProcessor = new DataProcessor.Mongo();
             oracleDataProcessor = new DataProcessor.Oracle();
-            pump = new DataProcessor.DataPump();      
+            pump = new DataProcessor.DataPump();
+
+            string last = "";
+
+            //label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last,ref user_type) + " " + last;          
         }
 
         protected async Task<List<ObjectClasses.MovieData>> crawl(int finalPage)
@@ -341,43 +343,7 @@ namespace Web_Movie_BI_Analytics
 
         private void btnScraper_Click(object sender, EventArgs e)
         {
-            Func<ChartPoint, string> labelPoint = chartPoint =>
-                string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
 
-            pieChart1.Series = new SeriesCollection
-            {
-                new PieSeries
-                {
-                    Title = "Maria",
-                    Values = new ChartValues<double> {3},
-                    PushOut = 15,
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                },
-                new PieSeries
-                {
-                    Title = "Charles",
-                    Values = new ChartValues<double> {4},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                },
-                new PieSeries
-                {
-                    Title = "Frida",
-                    Values = new ChartValues<double> {6},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                },
-                new PieSeries
-                {
-                    Title = "Frederic",
-                    Values = new ChartValues<double> {2},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                }
-            };
-
-            chart1.LegendLocation = LegendLocation.Bottom;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -407,6 +373,8 @@ namespace Web_Movie_BI_Analytics
 
             this.dropUserToDeleteOrEdit.AutoSize = false;
             this.dropUserToDeleteOrEdit.Size = new System.Drawing.Size(223, 30);
+
+
 
             txtBoxUsername.Text = "Username";
             txtBoxPassword.Text = "Password";    
@@ -799,7 +767,7 @@ namespace Web_Movie_BI_Analytics
         private void lblSystemManagement_Click(object sender, EventArgs e)
         {
             picBoxSystemManagement.Size = new Size(54, 52);
-            picBoxSystemManagement.Location = new Point(40, 540);
+            picBoxSystemManagement.Location = new Point(40, 545);
             lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 16);
 
             SystemSettingsCounterId++;
@@ -808,38 +776,47 @@ namespace Web_Movie_BI_Analytics
 
             lblScrape.Visible = false;
             picBoxDashComponents.Size = new Size(44, 42);
-            picBoxDashComponents.Location = new Point(48, 471);
+            picBoxDashComponents.Location = new Point(48, 485);
             label4.Font = new Font(label4.Font.FontFamily, 14);
 
             picBoxCrawler.Size = new Size(44, 42);
-            picBoxCrawler.Location = new Point(48, 399);
+            picBoxCrawler.Location = new Point(48, 413);
             label6.Font = new Font(label6.Font.FontFamily, 14);
+            picBoxCrawler.BackgroundImage = Properties.Resources.spider;           
 
             pnlCrawler.Visible = false;
             pnlDashboardComponents.Visible = false;
             btnScraper.Visible = false;
             lblScrape.Visible = false;
             pnlSystemManagement.Visible = true;
+
+            picBoxSystemManagement.BackgroundImage = Properties.Resources.management__1_;
+
+            picBoxDashComponents.BackgroundImage = Properties.Resources.icon__1_;
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             picBoxSystemManagement.Size = new Size(44, 42);
-            picBoxSystemManagement.Location = new Point(40, 540);
+            picBoxSystemManagement.Location = new Point(48, 560);
             lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 14);
 
             picBoxDashComponents.Size = new Size(54, 52);
-            picBoxDashComponents.Location = new Point(48, 471);
+            picBoxDashComponents.Location = new Point(45, 479);
             label4.Font = new Font(label4.Font.FontFamily, 16);
             lblScrape.Visible = false;
+            picBoxDashComponents.BackgroundImage = Properties.Resources.icon__2_;
+
+            picBoxSystemManagement.BackgroundImage = Properties.Resources.management;
 
             DashboardCounterId++;
             CrawlerCounterId = 0;
             SystemSettingsCounterId = 0;
 
             picBoxCrawler.Size = new Size(44, 42);
-            picBoxCrawler.Location = new Point(48, 399);
+            picBoxCrawler.Location = new Point(48, 413);
             label6.Font = new Font(label6.Font.FontFamily, 14);
+            picBoxCrawler.BackgroundImage = Properties.Resources.spider;            
 
             pnlCrawler.Visible = false;
             pnlDashboardComponents.Visible = true;
@@ -850,18 +827,22 @@ namespace Web_Movie_BI_Analytics
         private void label6_Click(object sender, EventArgs e)
         {
             picBoxSystemManagement.Size = new Size(44, 42);
-            picBoxSystemManagement.Location = new Point(40, 540);
+            picBoxSystemManagement.Location = new Point(48, 560);
             lblSystemManagement.Font = new Font(lblSystemManagement.Font.FontFamily, 14);
 
             picBoxDashComponents.Size = new Size(44, 42);
-            picBoxDashComponents.Location = new Point(48, 471);
+            picBoxDashComponents.Location = new Point(48, 485);
             label4.Font = new Font(label4.Font.FontFamily, 14);
+            picBoxDashComponents.BackgroundImage = Properties.Resources.icon__1_;
             lblScrape.Visible = false;
 
-            picBoxCrawler.Size = new Size(54, 52);
-            picBoxCrawler.Location = new Point(48, 399);
-            label6.Font = new Font(label6.Font.FontFamily, 16);
+            picBoxSystemManagement.BackgroundImage = Properties.Resources.management;
 
+            picBoxCrawler.Size = new Size(54, 52);
+            picBoxCrawler.Location = new Point(48, 405);
+            label6.Font = new Font(label6.Font.FontFamily, 16);
+            picBoxCrawler.BackgroundImage = Properties.Resources.spiderwhite;
+            
             CrawlerCounterId++;
             DashboardCounterId = 0;
             SystemSettingsCounterId = 0;
@@ -905,6 +886,8 @@ namespace Web_Movie_BI_Analytics
             lblDeleteUser.Visible = false;
             panel4.Visible = false;
 
+            picBoxDeco10.Visible = true;
+
             lblDeleteUser.Visible = false;
             lblCommitData.Visible = false;
 
@@ -928,6 +911,8 @@ namespace Web_Movie_BI_Analytics
             dropUserToDeleteOrEdit.Visible = true;
             lblDeleteUser.Visible = false;
             panel4.Visible = false;
+
+            picBoxDeco10.Visible = false;
 
             lblDeleteUser.Visible = false;
             lblCommitData.Visible = false;
@@ -963,6 +948,8 @@ namespace Web_Movie_BI_Analytics
             dropUserToDeleteOrEdit.Visible = true;
             lblDeleteUser.Visible = true;
             panel4.Visible = true;
+
+            picBoxDeco10.Visible = false;
 
             lblDeleteUser.Visible = false;
             lblCommitData.Visible = false;
@@ -1033,9 +1020,42 @@ namespace Web_Movie_BI_Analytics
             lblDeleteUser.Visible = false;
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void btnCommitData_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnScraper_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrawlData_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnCrawlData.Size = new Size(78, 67);
+            btnCrawlData.Location = new Point(313, 208);
+
+            lblCrawlBtn.Visible = true;
+        }
+
+        private void btnCrawlData_MouseLeave(object sender, EventArgs e)
+        {
+            btnCrawlData.Size = new Size(68, 57);
+            btnCrawlData.Location = new Point(315, 210);
+
+            lblCrawlBtn.Visible = false;
+        }
+
+        private void chcBoxAllPages_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chcBoxAllPages.Checked)
+            {
+                trcBarPagesToCrawl.Enabled = false;
+            }
+            else
+            {
+                trcBarPagesToCrawl.Enabled = true;
+            }            
         }
     }
 }

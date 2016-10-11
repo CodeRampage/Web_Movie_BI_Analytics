@@ -233,6 +233,46 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap handmade_go_signal_with_right_arrow {
+            get {
+                object obj = ResourceManager.GetObject("handmade-go-signal-with-right-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icon (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap male_user {
             get {
                 object obj = ResourceManager.GetObject("male-user", resourceCulture);
@@ -246,6 +286,16 @@ namespace Web_Movie_BI_Analytics.Properties {
         internal static System.Drawing.Bitmap management {
             get {
                 object obj = ResourceManager.GetObject("management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap management__1_ {
+            get {
+                object obj = ResourceManager.GetObject("management (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +353,16 @@ namespace Web_Movie_BI_Analytics.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pc_linked {
+            get {
+                object obj = ResourceManager.GetObject("pc-linked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap preview {
             get {
                 object obj = ResourceManager.GetObject("preview", resourceCulture);
@@ -326,6 +386,16 @@ namespace Web_Movie_BI_Analytics.Properties {
         internal static System.Drawing.Bitmap spider__1_ {
             get {
                 object obj = ResourceManager.GetObject("spider (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderwhite {
+            get {
+                object obj = ResourceManager.GetObject("spiderwhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
