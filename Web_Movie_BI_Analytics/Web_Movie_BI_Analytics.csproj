@@ -208,6 +208,27 @@
   <ItemGroup>
     <None Include="Resources\crawling-baby-silhouette.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spiderwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handmade-go-signal-with-right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc-linked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
