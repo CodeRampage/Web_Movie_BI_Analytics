@@ -11,6 +11,8 @@ using HtmlAgilityPack;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Windows.Forms.DataVisualization.Charting;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace Web_Movie_BI_Analytics
 {
@@ -46,11 +48,7 @@ namespace Web_Movie_BI_Analytics
             sessionUser = new LoginController();
             mongoDataProcessor = new DataProcessor.Mongo();
             oracleDataProcessor = new DataProcessor.Oracle();
-            pump = new DataProcessor.DataPump();
-
-            string last = "";
-
-            //label1.Text = sessionUser.userLogin("Zakes", "zakes123", ref last,ref user_type) + " " + last;          
+            pump = new DataProcessor.DataPump();      
         }
 
         protected async Task<List<ObjectClasses.MovieData>> crawl(int finalPage)
@@ -343,7 +341,43 @@ namespace Web_Movie_BI_Analytics
 
         private void btnScraper_Click(object sender, EventArgs e)
         {
+            Func<ChartPoint, string> labelPoint = chartPoint =>
+                string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
 
+            pieChart1.Series = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Maria",
+                    Values = new ChartValues<double> {3},
+                    PushOut = 15,
+                    DataLabels = true,
+                    LabelPoint = labelPoint
+                },
+                new PieSeries
+                {
+                    Title = "Charles",
+                    Values = new ChartValues<double> {4},
+                    DataLabels = true,
+                    LabelPoint = labelPoint
+                },
+                new PieSeries
+                {
+                    Title = "Frida",
+                    Values = new ChartValues<double> {6},
+                    DataLabels = true,
+                    LabelPoint = labelPoint
+                },
+                new PieSeries
+                {
+                    Title = "Frederic",
+                    Values = new ChartValues<double> {2},
+                    DataLabels = true,
+                    LabelPoint = labelPoint
+                }
+            };
+
+            chart1.LegendLocation = LegendLocation.Bottom;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -373,8 +407,6 @@ namespace Web_Movie_BI_Analytics
 
             this.dropUserToDeleteOrEdit.AutoSize = false;
             this.dropUserToDeleteOrEdit.Size = new System.Drawing.Size(223, 30);
-
-
 
             txtBoxUsername.Text = "Username";
             txtBoxPassword.Text = "Password";    
@@ -999,6 +1031,11 @@ namespace Web_Movie_BI_Analytics
             panel4.Location = new Point(314, 202);
 
             lblDeleteUser.Visible = false;
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
