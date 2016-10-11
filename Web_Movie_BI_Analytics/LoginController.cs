@@ -87,7 +87,6 @@ namespace Web_Movie_BI_Analytics
                 cmd.Parameters.Add("user_t", OracleDbType.Varchar2, System.Data.ParameterDirection.Input).Value = user_type;
                 cmd.ExecuteNonQuery();
 
-                string fname = cmd.Parameters["user_f"].Value.ToString();
                 conn.Close();
             }
         }
