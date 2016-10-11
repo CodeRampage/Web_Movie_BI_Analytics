@@ -1019,17 +1019,7 @@ namespace Web_Movie_BI_Analytics
 
             lblDeleteUser.Visible = false;
         }
-
-        private void btnCommitData_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnScraper_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnCrawlData_MouseMove(object sender, MouseEventArgs e)
         {
             btnCrawlData.Size = new Size(78, 67);

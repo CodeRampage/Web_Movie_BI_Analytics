@@ -1216,7 +1216,7 @@
             // 
             // picBoxDeco10
             // 
-            this.picBoxDeco10.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.icon__3_;
+            this.picBoxDeco10.BackgroundImage = global::Web_Movie_BI_Analytics.Properties.Resources.team;
             this.picBoxDeco10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxDeco10.Location = new System.Drawing.Point(255, 119);
             this.picBoxDeco10.Name = "picBoxDeco10";
